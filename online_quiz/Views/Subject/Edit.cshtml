@@ -1,0 +1,94 @@
+﻿@model online_quiz.Models.Subject
+
+@{
+    ViewData["Title"] = "Edit Subject";
+}
+
+<div class="container mt-4">
+
+    <h1>Edit Subject</h1>
+
+    <hr />
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <form asp-action="Edit" method="post">
+
+                <input type="hidden" asp-for="Id" />
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger">
+                </div>
+
+                <!-- Subject Name -->
+                <div class="mb-3">
+
+                    <label asp-for="Name"
+                           class="form-label">
+                        Subject Name
+                    </label>
+
+                    <input asp-for="Name"
+                           class="form-control" />
+
+                    <span asp-validation-for="Name"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+
+                    <label asp-for="Description"
+                           class="form-label">
+                        Description
+                    </label>
+
+                    <textarea asp-for="Description"
+                              class="form-control"
+                              rows="4">
+                    </textarea>
+
+                    <span asp-validation-for="Description"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Active Status -->
+                <div class="form-check mb-3">
+
+                    <input asp-for="IsActive"
+                           class="form-check-input" />
+
+                    <label asp-for="IsActive"
+                           class="form-check-label">
+                        Active
+                    </label>
+
+                </div>
+
+                <button type="submit"
+                        class="btn btn-primary">
+                    Save Changes
+                </button>
+
+                <a asp-action="Index"
+                   class="btn btn-secondary">
+                    Back to Subjects
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

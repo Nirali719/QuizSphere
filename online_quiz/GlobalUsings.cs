@@ -1,0 +1,1 @@
+﻿global using online_quiz.Models;

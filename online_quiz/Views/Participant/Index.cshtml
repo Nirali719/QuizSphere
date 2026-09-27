@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Participant Dashboard";
+}
+
+<div class="container mt-4">
+
+    <div class="text-center mb-4">
+        <h1>Participant Dashboard</h1>
+
+        <p class="lead">
+            Welcome to the Online Quiz Portal Participant Panel.
+        </p>
+    </div>
+
+    <hr />
+
+    <div class="row mt-4">
+
+        <!-- Available Quizzes -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">Available Quizzes</h5>
+
+                    <p class="card-text">
+                        View approved quizzes and attempt them.
+                    </p>
+
+                    <a asp-controller="Participant"
+                       asp-action="Subjects"
+                       class="btn btn-primary">
+                        View Quizzes
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- My Results -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">My Results</h5>
+
+                    <p class="card-text">
+                        View your quiz results and scores.
+                    </p>
+
+                    <a asp-controller="Participant"
+                       asp-action="History"
+                       class="btn btn-primary">
+                        My Results
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- My Progress -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">My Progress</h5>
+
+                    <p class="card-text">
+                        View your subject-wise quiz progress.
+                    </p>
+
+                    <a asp-controller="Participant"
+                       asp-action="Progress"
+                       class="btn btn-primary">
+                        My Progress
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

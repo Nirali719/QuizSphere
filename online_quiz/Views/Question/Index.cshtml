@@ -1,0 +1,108 @@
+﻿@model IEnumerable<online_quiz.Models.Question>
+
+@{
+    ViewData["Title"] = "Questions";
+    var quiz = ViewBag.Quiz as online_quiz.Models.Quiz;
+}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+
+        <div>
+            <h1>@quiz.Title</h1>
+            <p class="text-muted">
+                Manage Questions
+            </p>
+        </div>
+
+        <a asp-action="Create"
+           asp-route-quizId="@quiz.Id"
+           class="btn btn-primary">
+            Add Question
+        </a>
+
+    </div>
+
+    <hr />
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            No questions have been added to this quiz yet.
+        </div>
+    }
+    else
+    {
+        <table class="table table-bordered table-striped">
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Question</th>
+                    <th>Marks</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @{
+                    int number = 1;
+                }
+
+                @foreach (var question in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @number
+                        </td>
+
+                        <td>
+                            @question.QuestionText
+                        </td>
+
+                        <td>
+                            @question.Marks
+                        </td>
+
+                        <td>
+
+                            <a asp-controller="Option"
+                               asp-action="Index"
+                               asp-route-questionId="@question.Id"
+                               class="btn btn-sm btn-primary">
+                                Options
+                            </a>
+
+                            <a asp-action="Edit"
+                               asp-route-id="@question.Id"
+                               class="btn btn-sm btn-warning">
+                                Edit
+                            </a>
+
+                            <a asp-action="Delete"
+                               asp-route-id="@question.Id"
+                               class="btn btn-sm btn-danger">
+                                Delete
+                            </a>
+
+                        </td>
+                      </tr>
+
+                    number++;
+                }
+
+            </tbody>
+
+        </table>
+    }
+
+    <a asp-controller="Quiz"
+       asp-action="Index"
+       class="btn btn-secondary">
+        Back to My Quizzes
+    </a>
+
+</div>

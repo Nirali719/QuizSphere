@@ -1,0 +1,127 @@
+﻿@model IEnumerable<online_quiz.Models.Result>
+
+@{
+    ViewData["Title"] = "Quiz Responses";
+
+    var quiz = ViewBag.Quiz as online_quiz.Models.Quiz;
+}
+
+<div class="container mt-4">
+
+    <h1>Quiz Responses</h1>
+
+    @if (quiz != null)
+    {
+        <p class="text-muted">
+            Quiz:
+            <strong>@quiz.Title</strong>
+            |
+            Subject:
+            <strong>@quiz.Subject?.Name</strong>
+        </p>
+    }
+
+    <hr />
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            No participants have attempted this quiz yet.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-striped">
+
+                <thead>
+                    <tr>
+                        <th>Participant</th>
+                        <th>Email</th>
+                        <th>Score</th>
+                        <th>Total Marks</th>
+                        <th>Percentage</th>
+                        <th>Result</th>
+                        <th>Attempted On</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var result in Model)
+                    {
+                        <tr>
+
+                            <td>
+                                @result.QuizAttempt?.Participant?.FullName
+                            </td>
+
+                            <td>
+                                @result.QuizAttempt?.Participant?.Email
+                            </td>
+
+                            <td>
+                                @result.Score
+                            </td>
+
+                            <td>
+                                @result.TotalMarks
+                            </td>
+
+                            <td>
+                                @result.Percentage.ToString("0.00")%
+                            </td>
+
+                            <td>
+
+                                @if (result.IsPassed)
+                                {
+                                    <span class="badge bg-success">
+                                        PASS
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">
+                                        FAIL
+                                    </span>
+                                }
+
+                            </td>
+
+                            <td>
+                                @result.QuizAttempt?.EndTime?.ToString("dd-MM-yyyy HH:mm")
+                            </td>
+
+                            <td>
+                                <a asp-controller="Quiz"
+                                   asp-action="ResponseDetails"
+                                   asp-route-id="@result.Id"
+                                   class="btn btn-sm btn-primary">
+                                    View Details
+                                </a>
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    }
+
+    <div class="mt-4">
+
+        <a asp-controller="Quiz"
+           asp-action="Index"
+           class="btn btn-secondary">
+            Back to My Quizzes
+        </a>
+
+    </div>
+
+</div>

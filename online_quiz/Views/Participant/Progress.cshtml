@@ -1,0 +1,82 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "My Progress";
+}
+
+<div class="container mt-4">
+
+    <h1>My Progress</h1>
+
+    <p class="text-muted">
+        View your subject-wise quiz performance.
+    </p>
+
+    <hr />
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            You have not attempted any quizzes yet.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-striped">
+
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Quizzes Attempted</th>
+                        <th>Average Score</th>
+                        <th>Average Percentage</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    @item.SubjectName
+                                </strong>
+                            </td>
+
+                            <td>
+                                @item.QuizzesAttempted
+                            </td>
+
+                            <td>
+                                @item.AverageScore.ToString("0.00")
+                            </td>
+
+                            <td>
+                                @item.AveragePercentage.ToString("0.00")%
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    }
+
+    <div class="mt-4">
+
+        <a asp-controller="Participant"
+           asp-action="Index"
+           class="btn btn-secondary">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</div>

@@ -1,0 +1,242 @@
+﻿@model online_quiz.Models.Result
+
+@{
+    ViewData["Title"] = "Quiz Result";
+
+    var answers = ViewBag.Answers
+        as List<online_quiz.Models.StudentAnswer>;
+}
+
+<div class="container mt-4">
+
+    <h1>Quiz Result</h1>
+
+    <hr />
+    @if (TempData["TimeExpired"] != null)
+    {
+        <div class="alert alert-warning">
+            <strong>Time's Up!</strong>
+            <br />
+            @TempData["TimeExpired"]
+        </div>
+    }
+    <div class="card mb-4">
+        <div class="card-body">
+
+            <h3>
+                @Model.QuizAttempt?.Quiz?.Title
+            </h3>
+
+            <p class="text-muted">
+                Subject:
+                <strong>
+                    @Model.QuizAttempt?.Quiz?.Subject?.Name
+                </strong>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6 mb-3">
+            <div class="card">
+                <div class="card-body">
+
+                    <h5>Total Questions</h5>
+
+                    <h3>
+                        @Model.TotalQuestions
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <div class="card">
+                <div class="card-body">
+
+                    <h5>Correct Answers</h5>
+
+                    <h3>
+                        @Model.CorrectAnswers
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <div class="card">
+                <div class="card-body">
+
+                    <h5>Incorrect Answers</h5>
+
+                    <h3>
+                        @Model.IncorrectAnswers
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <div class="card">
+                <div class="card-body">
+
+                    <h5>Unattempted</h5>
+
+                    <h3>
+                        @Model.Unattempted
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body text-center">
+
+            <h4>Your Score</h4>
+
+            <h1>
+                @Model.Score / @Model.TotalMarks
+            </h1>
+
+            <h4>
+                Percentage:
+                @Model.Percentage.ToString("0.00")%
+            </h4>
+
+            @if (Model.IsPassed)
+            {
+                <div class="alert alert-success mt-3">
+                    <strong>PASS</strong>
+                    <br />
+                    Congratulations! You have passed the quiz.
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger mt-3">
+                    <strong>FAIL</strong>
+                    <br />
+                    You did not reach the passing marks.
+                </div>
+            }
+
+        </div>
+    </div>
+
+    <hr class="mt-5" />
+
+    <h2>Answer Review</h2>
+
+    <p class="text-muted">
+        Review your answers and see the correct answers.
+    </p>
+
+    @if (answers != null && answers.Any())
+    {
+        int questionNumber = 1;
+
+        @foreach (var answer in answers)
+        {
+            var correctOption = answer.Question?.Options?
+                .FirstOrDefault(o => o.IsCorrect);
+
+            <div class="card mb-4">
+
+                <div class="card-body">
+
+                    <h5>
+                        Question @questionNumber
+                    </h5>
+
+                    <p>
+                        <strong>
+                            @answer.Question?.QuestionText
+                        </strong>
+                    </p>
+
+                    <p>
+                        <strong>Your Answer:</strong>
+
+                        @if (answer.SelectedOption != null)
+                        {
+                            <span>
+                                @answer.SelectedOption.OptionText
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="text-muted">
+                                Not Attempted
+                            </span>
+                        }
+                    </p>
+
+                    <p>
+                        <strong>Correct Answer:</strong>
+
+                        @if (correctOption != null)
+                        {
+                            <span>
+                                @correctOption.OptionText
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">
+                                Not available
+                            </span>
+                        }
+                    </p>
+
+                    @if (answer.SelectedOptionId == null)
+                    {
+                        <div class="alert alert-warning">
+                            Unattempted
+                        </div>
+                    }
+                    else if (answer.SelectedOption?.IsCorrect == true)
+                    {
+                        <div class="alert alert-success">
+                            Correct Answer
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-danger">
+                            Incorrect Answer
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+
+            questionNumber++;
+        }
+    }
+    else
+    {
+        <div class="alert alert-info">
+            No answer details are available.
+        </div>
+    }
+
+    <div class="mt-4 mb-4">
+
+        <a asp-controller="Participant"
+           asp-action="Subjects"
+           class="btn btn-primary">
+            Back to Available Quizzes
+        </a>
+
+    </div>
+
+</div>

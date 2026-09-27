@@ -1,0 +1,193 @@
+﻿@model online_quiz.Models.Quiz
+
+@{
+    ViewData["Title"] = "Create Quiz";
+}
+
+<div class="container mt-4">
+
+    <h1>Create Quiz</h1>
+
+    <hr />
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <form asp-action="Create" method="post">
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger">
+                </div>
+
+                <!-- Quiz Title -->
+                <div class="mb-3">
+
+                    <label asp-for="Title"
+                           class="form-label">
+                        Quiz Title
+                    </label>
+
+                    <input asp-for="Title"
+                           class="form-control"
+                           placeholder="Enter quiz title" />
+
+                    <span asp-validation-for="Title"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+
+                    <label asp-for="Description"
+                           class="form-label">
+                        Description
+                    </label>
+
+                    <textarea asp-for="Description"
+                              class="form-control"
+                              rows="4"
+                              placeholder="Enter quiz description">
+                    </textarea>
+
+                    <span asp-validation-for="Description"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Subject -->
+                <div class="mb-3">
+
+                    <label asp-for="SubjectId"
+                           class="form-label">
+                        Subject
+                    </label>
+
+                    <select asp-for="SubjectId"
+                            class="form-select">
+
+                        <option value="">
+                            Select Subject
+                        </option>
+
+                        @foreach (var subject in ViewBag.Subjects)
+                        {
+                            <option value="@subject.Id">
+                                @subject.Name
+                            </option>
+                        }
+
+                    </select>
+
+                    <span asp-validation-for="SubjectId"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Total Marks -->
+                <div class="mb-3">
+
+                    <label asp-for="TotalMarks"
+                           class="form-label">
+                        Total Marks
+                    </label>
+
+                    <input asp-for="TotalMarks"
+                           type="number"
+                           min="1"
+                           class="form-control" />
+
+                    <span asp-validation-for="TotalMarks"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Passing Marks -->
+                <div class="mb-3">
+
+                    <label asp-for="PassingMarks"
+                           class="form-label">
+                        Passing Marks
+                    </label>
+
+                    <input asp-for="PassingMarks"
+                           type="number"
+                           min="1"
+                           class="form-control" />
+
+                    <span asp-validation-for="PassingMarks"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Time Limit -->
+                <div class="mb-3">
+
+                    <label asp-for="TimeLimit"
+                           class="form-label">
+                        Time Limit (Minutes)
+                    </label>
+
+                    <input asp-for="TimeLimit"
+                           type="number"
+                           min="1"
+                           class="form-control" />
+
+                    <span asp-validation-for="TimeLimit"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Maximum Attempts -->
+                <div class="mb-3">
+
+                    <label asp-for="MaxAttempts"
+                           class="form-label">
+                        Maximum Attempts
+                    </label>
+
+                    <select asp-for="MaxAttempts"
+                            class="form-select">
+
+                        <option value="1">1 Attempt</option>
+                        <option value="2">2 Attempts</option>
+                        <option value="3">3 Attempts</option>
+                        <option value="0">Unlimited</option>
+
+                    </select>
+
+                    <span asp-validation-for="MaxAttempts"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Buttons -->
+                <button type="submit"
+                        class="btn btn-primary">
+                    Create Quiz
+                </button>
+
+                <a asp-action="Index"
+                   class="btn btn-secondary">
+                    Back to My Quizzes
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

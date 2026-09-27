@@ -1,0 +1,77 @@
+﻿@model online_quiz.Models.Subject
+
+@{
+    ViewData["Title"] = "Deactivate Subject";
+}
+
+<div class="container mt-4">
+
+    <h1>Deactivate Subject</h1>
+
+    <hr />
+
+    <div class="alert alert-warning">
+        <strong>Are you sure you want to deactivate this subject?</strong>
+        <br />
+        The subject will no longer be active, but existing quizzes and
+        records will remain safe.
+    </div>
+
+    <dl class="row">
+
+        <dt class="col-sm-3">
+            Subject Name
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.Name
+        </dd>
+
+        <dt class="col-sm-3">
+            Description
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.Description
+        </dd>
+
+        <dt class="col-sm-3">
+            Current Status
+        </dt>
+
+        <dd class="col-sm-9">
+
+            @if (Model.IsActive)
+            {
+                <span class="badge bg-success">
+                    Active
+                </span>
+            }
+            else
+            {
+                <span class="badge bg-danger">
+                    Inactive
+                </span>
+            }
+
+        </dd>
+
+    </dl>
+
+    <form asp-action="Delete" method="post">
+
+        <input type="hidden" asp-for="Id" />
+
+        <button type="submit"
+                class="btn btn-danger">
+            Deactivate Subject
+        </button>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+            Cancel
+        </a>
+
+    </form>
+
+</div>

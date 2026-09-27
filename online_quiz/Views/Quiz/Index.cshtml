@@ -1,0 +1,221 @@
+﻿@model IEnumerable<online_quiz.Models.Quiz>
+
+@{
+    ViewData["Title"] = "My Quizzes";
+}
+
+<div class="container mt-4">
+
+    <h1>My Quizzes</h1>
+
+    <p>
+        Manage the quizzes created by you.
+    </p>
+
+    <hr />
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    <p>
+        <a asp-controller="Quiz"
+           asp-action="Create"
+           class="btn btn-primary">
+            Create New Quiz
+        </a>
+    </p>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            You have not created any quizzes yet.
+        </div>
+    }
+    else
+    {
+        <table class="table table-bordered table-striped">
+
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Subject</th>
+                    <th>Total Marks</th>
+                    <th>Passing Marks</th>
+                    <th>Time Limit</th>
+                    <th>Max Attempts</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var quiz in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @quiz.Title
+                        </td>
+
+                        <td>
+                            @quiz.Subject?.Name
+                        </td>
+
+                        <td>
+                            @quiz.TotalMarks
+                        </td>
+
+                        <td>
+                            @quiz.PassingMarks
+                        </td>
+
+                        <td>
+                            @quiz.TimeLimit minutes
+                        </td>
+
+                        <td>
+                            @if (quiz.MaxAttempts == 0)
+                            {
+                                <span>Unlimited</span>
+                            }
+                            else
+                            {
+                                <span>@quiz.MaxAttempts</span>
+                            }
+                        </td>
+
+                        <td>
+
+                            @if (quiz.Status == "DRAFT")
+                            {
+                                <span class="badge bg-secondary">
+                                    DRAFT
+                                </span>
+                            }
+                            else if (quiz.Status == "PENDING")
+                            {
+                                <span class="badge bg-warning text-dark">
+                                    PENDING
+                                </span>
+                            }
+                            else if (quiz.Status == "APPROVED")
+                            {
+                                <span class="badge bg-success">
+                                    APPROVED
+                                </span>
+                            }
+                            else if (quiz.Status == "REJECTED")
+                            {
+                                <span class="badge bg-danger">
+                                    REJECTED
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">
+                                    @quiz.Status
+                                </span>
+                            }
+
+                        </td>
+
+                        <td>
+
+                            <a asp-controller="Question"
+                               asp-action="Index"
+                               asp-route-quizId="@quiz.Id"
+                               class="btn btn-sm btn-info">
+                                Questions
+                            </a>
+
+                            <a asp-controller="Quiz"
+                               asp-action="Responses"
+                               asp-route-id="@quiz.Id"
+                               class="btn btn-sm btn-dark">
+                                Responses
+                            </a>
+
+                            <a asp-controller="Quiz"
+                               asp-action="Edit"
+                               asp-route-id="@quiz.Id"
+                               class="btn btn-sm btn-warning">
+                                Edit
+                            </a>
+
+                            <a asp-controller="Quiz"
+                               asp-action="Delete"
+                               asp-route-id="@quiz.Id"
+                               class="btn btn-sm btn-danger">
+                                Delete
+                            </a>
+
+                            @if (quiz.Status == "DRAFT")
+                            {
+                                <form asp-controller="Quiz"
+                                      asp-action="SubmitForApproval"
+                                      asp-route-id="@quiz.Id"
+                                      method="post"
+                                      style="display:inline;">
+
+                                    @Html.AntiForgeryToken()
+
+                                    <button type="submit"
+                                            class="btn btn-sm btn-primary">
+                                        Submit for Approval
+                                    </button>
+
+                                </form>
+                            }
+                            else if (quiz.Status == "PENDING")
+                            {
+                                <span class="badge bg-secondary">
+                                    Already Submitted
+                                </span>
+                            }
+                            else if (quiz.Status == "APPROVED")
+                            {
+                                <span class="badge bg-success">
+                                    Approved
+                                </span>
+                            }
+                            else if (quiz.Status == "REJECTED")
+                            {
+                                <form asp-controller="Quiz"
+                                      asp-action="SubmitForApproval"
+                                      asp-route-id="@quiz.Id"
+                                      method="post"
+                                      style="display:inline;">
+
+                                    @Html.AntiForgeryToken()
+
+                                    <button type="submit"
+                                            class="btn btn-sm btn-primary">
+                                        Submit Again
+                                    </button>
+
+                                </form>
+                            }
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    }
+
+</div>

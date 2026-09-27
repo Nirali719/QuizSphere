@@ -1,0 +1,147 @@
+﻿@model IEnumerable<online_quiz.Models.Quiz>
+
+@{
+    ViewData["Title"] = "Available Quizzes";
+
+    var attemptCounts =
+        ViewBag.AttemptCounts as Dictionary<int, int>
+        ?? new Dictionary<int, int>();
+}
+
+<div class="container mt-4">
+
+    <h1>Available Quizzes</h1>
+
+    @if (Model.Any())
+    {
+        <p class="text-muted">
+            Showing approved quizzes for the selected subject.
+        </p>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-warning">
+            @TempData["Error"]
+        </div>
+    }
+
+    <p class="text-muted">
+        These quizzes have been approved by the Admin and are available for you to attempt.
+    </p>
+
+    <hr />
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            No approved quizzes are available at the moment.
+        </div>
+    }
+    else
+    {
+        <div class="row">
+
+            @foreach (var quiz in Model)
+            {
+                int attemptCount = 0;
+
+                if (attemptCounts.ContainsKey(quiz.Id))
+                {
+                    attemptCount = attemptCounts[quiz.Id];
+                }
+
+                bool maxAttemptsReached =
+                    quiz.MaxAttempts > 0 &&
+                    attemptCount >= quiz.MaxAttempts;
+
+                <div class="col-md-6 mb-4">
+
+                    <div class="card h-100">
+
+                        <div class="card-body">
+
+                            <h4 class="card-title">
+                                @quiz.Title
+                            </h4>
+
+                            <p class="text-muted mb-2">
+                                Subject:
+                                <strong>@quiz.Subject?.Name</strong>
+                            </p>
+
+                            <p>
+                                @quiz.Description
+                            </p>
+
+                            <hr />
+
+                            <p>
+                                <strong>Total Marks:</strong>
+                                @quiz.TotalMarks
+                            </p>
+
+                            <p>
+                                <strong>Passing Marks:</strong>
+                                @quiz.PassingMarks
+                            </p>
+
+                            <p>
+                                <strong>Time Limit:</strong>
+                                @quiz.TimeLimit minutes
+                            </p>
+
+                            <p>
+                                <strong>Maximum Attempts:</strong>
+
+                                @if (quiz.MaxAttempts == 0)
+                                {
+                                    <span>Unlimited</span>
+                                }
+                                else
+                                {
+                                    <span>@quiz.MaxAttempts</span>
+                                }
+                            </p>
+
+                            @if (quiz.MaxAttempts > 0)
+                            {
+                                <p>
+                                    <strong>Your Attempts:</strong>
+                                    @attemptCount / @quiz.MaxAttempts
+                                </p>
+                            }
+
+                            @if (maxAttemptsReached)
+                            {
+                                <div class="alert alert-warning mt-3">
+                                    <strong>Maximum Attempts Reached</strong>
+                                    <br />
+                                    You have already used all
+                                    @quiz.MaxAttempts
+                                    attempts for this quiz.
+                                    <br />
+                                    You cannot attempt this quiz again.
+                                </div>
+                            }
+                            else
+                            {
+                                <a asp-controller="Participant"
+                                   asp-action="Attempt"
+                                   asp-route-id="@quiz.Id"
+                                   class="btn btn-primary">
+                                    Attempt Quiz
+                                </a>
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+        </div>
+    }
+
+</div>

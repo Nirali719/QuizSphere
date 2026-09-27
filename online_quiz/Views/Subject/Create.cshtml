@@ -1,0 +1,82 @@
+﻿@model online_quiz.Models.Subject
+
+@{
+    ViewData["Title"] = "Create Subject";
+}
+
+<div class="container mt-4">
+
+    <h1>Create Subject</h1>
+
+    <hr />
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <form asp-action="Create" method="post">
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger">
+                </div>
+
+                <!-- Subject Name -->
+                <div class="mb-3">
+
+                    <label asp-for="Name"
+                           class="form-label">
+                        Subject Name
+                    </label>
+
+                    <input asp-for="Name"
+                           class="form-control"
+                           placeholder="Enter subject name" />
+
+                    <span asp-validation-for="Name"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+
+                    <label asp-for="Description"
+                           class="form-label">
+                        Description
+                    </label>
+
+                    <textarea asp-for="Description"
+                              class="form-control"
+                              rows="4"
+                              placeholder="Enter subject description">
+                    </textarea>
+
+                    <span asp-validation-for="Description"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- Buttons -->
+                <button type="submit"
+                        class="btn btn-primary">
+                    Create Subject
+                </button>
+
+                <a asp-action="Index"
+                   class="btn btn-secondary">
+                    Back to Subjects
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

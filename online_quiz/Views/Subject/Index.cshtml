@@ -1,0 +1,92 @@
+﻿@model IEnumerable<online_quiz.Models.Subject>
+
+@{
+    ViewData["Title"] = "Subjects";
+}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>Subjects</h1>
+
+        <a asp-action="Create" class="btn btn-primary">
+            Create Subject
+        </a>
+    </div>
+
+    <hr />
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            No subjects have been created yet.
+        </div>
+    }
+    else
+    {
+        <table class="table table-bordered table-striped">
+
+            <thead>
+                <tr>
+                    <th>Subject Name</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var subject in Model)
+                {
+                    <tr>
+                        <td>@subject.Name</td>
+
+                        <td>@subject.Description</td>
+
+                        <td>
+                            @if (subject.IsActive)
+                            {
+                                <span class="badge bg-success">
+                                    Active
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">
+                                    Inactive
+                                </span>
+                            }
+                        </td>
+
+                        <td>
+                            @if (subject.IsActive)
+                            {
+                                <a asp-action="Edit"
+                                   asp-route-id="@subject.Id"
+                                   class="btn btn-sm btn-warning">
+                                    Edit
+                                </a>
+
+                                <a asp-action="Delete"
+                                   asp-route-id="@subject.Id"
+                                   class="btn btn-sm btn-danger">
+                                    Deactivate
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-action="Activate"
+                                   asp-route-id="@subject.Id"
+                                   class="btn btn-sm btn-success">
+                                    Activate
+                                </a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    }
+
+</div>

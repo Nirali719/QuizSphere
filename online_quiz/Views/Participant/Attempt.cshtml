@@ -1,0 +1,165 @@
+﻿@model online_quiz.Models.Quiz
+
+@{
+    ViewData["Title"] = "Attempt Quiz";
+}
+
+<div class="container mt-4">
+
+    <div class="alert alert-warning text-center">
+        <strong>Time Remaining:</strong>
+        <span id="timer">Loading...</span>
+    </div>
+
+    <div class="mb-4">
+
+        <h1>@Model.Title</h1>
+
+        <p class="text-muted">
+            Subject:
+            <strong>@Model.Subject?.Name</strong>
+        </p>
+
+        <p>
+            <strong>Total Marks:</strong> @Model.TotalMarks
+            |
+            <strong>Passing Marks:</strong> @Model.PassingMarks
+            |
+            <strong>Time:</strong> @Model.TimeLimit minutes
+        </p>
+
+    </div>
+
+    <hr />
+
+    <form id="quizForm"
+          asp-controller="Participant"
+          asp-action="SubmitAttempt"
+          method="post">
+
+        @Html.AntiForgeryToken()
+
+        <input type="hidden"
+               name="QuizId"
+               value="@Model.Id" />
+
+        <input type="hidden"
+               name="AttemptId"
+               value="@ViewBag.AttemptId" />
+
+        @if (Model.Questions != null && Model.Questions.Any())
+        {
+            int number = 1;
+
+            @foreach (var question in Model.Questions.OrderBy(q => q.Id))
+            {
+                <div class="card mb-4">
+
+                    <div class="card-body">
+
+                        <h5>
+                            Question @number
+                        </h5>
+
+                        <p>
+                            <strong>@question.QuestionText</strong>
+                        </p>
+
+                        <p class="text-muted">
+                            Marks: @question.Marks
+                        </p>
+
+                        @foreach (var option in question.Options ?? new List<online_quiz.Models.Option>())
+                        {
+                            <div class="form-check mb-2">
+
+                                <input class="form-check-input"
+                                       type="radio"
+                                       name="Answers[@question.Id]"
+                                       value="@option.Id"
+                                       id="option_@option.Id" />
+
+                                <label class="form-check-label"
+                                       for="option_@option.Id">
+
+                                    @option.OptionText
+
+                                </label>
+
+                            </div>
+                        }
+
+                    </div>
+
+                </div>
+
+                number++;
+            }
+
+            <button type="submit"
+                    id="submitQuizButton"
+                    class="btn btn-success">
+                Submit Quiz
+            </button>
+        }
+        else
+        {
+            <div class="alert alert-warning">
+                This quiz does not have any questions yet.
+            </div>
+        }
+
+    </form>
+
+</div>
+
+<script>
+
+    // Get the remaining time calculated by the SERVER
+    let timeRemaining = @ViewBag.RemainingSeconds;
+
+    const timer = document.getElementById("timer");
+
+    // Select ONLY the quiz form
+    const form = document.getElementById("quizForm");
+
+    let isSubmitting = false;
+
+    function updateTimer()
+    {
+        let minutes = Math.floor(timeRemaining / 60);
+
+        let seconds = timeRemaining % 60;
+
+        seconds = seconds < 10
+            ? "0" + seconds
+            : seconds;
+
+        timer.textContent =
+            minutes + ":" + seconds;
+
+        if (timeRemaining <= 0)
+        {
+            clearInterval(timerInterval);
+
+            if (!isSubmitting)
+            {
+                isSubmitting = true;
+
+                timer.textContent = "Time's Up!";
+
+                // Submit ONLY the quiz form
+                form.submit();
+            }
+
+            return;
+        }
+
+        timeRemaining--;
+    }
+
+    updateTimer();
+
+    const timerInterval = setInterval(updateTimer, 1000);
+
+</script>

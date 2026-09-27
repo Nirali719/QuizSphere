@@ -1,0 +1,280 @@
+﻿@model online_quiz.Models.Result
+
+@{
+    ViewData["Title"] = "Result Details";
+
+    var answers =
+        ViewBag.Answers as List<online_quiz.Models.StudentAnswer>;
+}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+            <h1>Result Details</h1>
+
+            <p class="text-muted mb-0">
+                Detailed participant response
+            </p>
+        </div>
+
+        <a asp-controller="Admin"
+           asp-action="Results"
+           class="btn btn-secondary">
+            Back to Results
+        </a>
+
+    </div>
+
+    <!-- Participant Information -->
+
+    <div class="card mb-4">
+
+        <div class="card-header">
+            <h4>Participant Information</h4>
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <strong>Name:</strong>
+                    @Model.QuizAttempt.Participant?.FullName
+                </div>
+
+                <div class="col-md-6">
+                    <strong>Email:</strong>
+                    @Model.QuizAttempt.Participant?.Email
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Quiz Information -->
+
+    <div class="card mb-4">
+
+        <div class="card-header">
+            <h4>Quiz Information</h4>
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <strong>Quiz:</strong>
+                    @Model.QuizAttempt.Quiz?.Title
+                </div>
+
+                <div class="col-md-6">
+                    <strong>Subject:</strong>
+                    @Model.QuizAttempt.Quiz?.Subject?.Name
+                </div>
+
+                <div class="col-md-6 mt-2">
+                    <strong>Total Marks:</strong>
+                    @Model.TotalMarks
+                </div>
+
+                <div class="col-md-6 mt-2">
+                    <strong>Score:</strong>
+                    @Model.Score
+                </div>
+
+                <div class="col-md-6 mt-2">
+                    <strong>Percentage:</strong>
+                    @Model.Percentage.ToString("0.00")%
+                </div>
+
+                <div class="col-md-6 mt-2">
+
+                    <strong>Status:</strong>
+
+                    @if (Model.IsPassed)
+                    {
+                        <span class="badge bg-success">
+                            PASS
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">
+                            FAIL
+                        </span>
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Answer Summary -->
+
+    <div class="card mb-4">
+
+        <div class="card-header">
+            <h4>Answer Summary</h4>
+        </div>
+
+        <div class="card-body">
+
+            <div class="row text-center">
+
+                <div class="col-md-3">
+                    <strong>Total Questions</strong>
+                    <h4>@Model.TotalQuestions</h4>
+                </div>
+
+                <div class="col-md-3">
+                    <strong>Correct</strong>
+                    <h4 class="text-success">
+                        @Model.CorrectAnswers
+                    </h4>
+                </div>
+
+                <div class="col-md-3">
+                    <strong>Incorrect</strong>
+                    <h4 class="text-danger">
+                        @Model.IncorrectAnswers
+                    </h4>
+                </div>
+
+                <div class="col-md-3">
+                    <strong>Unattempted</strong>
+                    <h4 class="text-warning">
+                        @Model.Unattempted
+                    </h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Detailed Answers -->
+
+    <div class="card">
+
+        <div class="card-header">
+            <h4>Participant Responses</h4>
+        </div>
+
+        <div class="card-body">
+
+            @if (answers != null && answers.Any())
+            {
+                int number = 1;
+
+                @foreach (var answer in answers)
+                {
+                    var correctOption =
+                        answer.Question?.Options?
+                            .FirstOrDefault(o => o.IsCorrect);
+
+                    bool isCorrect =
+                        answer.SelectedOption != null &&
+                        answer.SelectedOption.IsCorrect;
+
+                    <div class="card mb-4">
+
+                        <div class="card-body">
+
+                            <h5>
+                                Question @number
+                            </h5>
+
+                            <p>
+                                <strong>
+                                    @answer.Question?.QuestionText
+                                </strong>
+                            </p>
+
+                            <p class="text-muted">
+                                Marks:
+                                @answer.Question?.Marks
+                            </p>
+
+                            <hr />
+
+                            <p>
+                                <strong>Participant Answer:</strong>
+
+                                @if (answer.SelectedOption != null)
+                                {
+                                    <span>
+                                        @answer.SelectedOption.OptionText
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="text-warning">
+                                        Not Attempted
+                                    </span>
+                                }
+                            </p>
+
+                            <p>
+                                <strong>Correct Answer:</strong>
+
+                                @if (correctOption != null)
+                                {
+                                    <span>
+                                        @correctOption.OptionText
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span>
+                                        Not Available
+                                    </span>
+                                }
+                            </p>
+
+                            @if (answer.SelectedOption == null)
+                            {
+                                <span class="badge bg-warning text-dark">
+                                    Unattempted
+                                </span>
+                            }
+                            else if (isCorrect)
+                            {
+                                <span class="badge bg-success">
+                                    Correct
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">
+                                    Incorrect
+                                </span>
+                            }
+
+                        </div>
+
+                    </div>
+
+                    number++;
+                }
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    No answers were recorded for this attempt.
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,138 @@
+﻿@model IEnumerable<online_quiz.Models.Option>
+
+@{
+    ViewData["Title"] = "Options";
+    var question = ViewBag.Question as online_quiz.Models.Question;
+}
+
+<div class="container mt-4">
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+    <div class="d-flex justify-content-between align-items-center mb-3">
+
+        <div>
+            <h1>Options</h1>
+
+            <p class="text-muted">
+                Question:
+                <strong>@question.QuestionText</strong>
+            </p>
+        </div>
+
+        <a asp-action="Create"
+           asp-route-questionId="@question.Id"
+           class="btn btn-primary">
+            Add Option
+        </a>
+
+    </div>
+
+    <hr />
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            No options have been added to this question yet.
+        </div>
+    }
+    else
+    {
+        <table class="table table-bordered table-striped">
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Option</th>
+                    <th>Correct Answer</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @{
+                    int number = 1;
+                }
+
+                @foreach (var option in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @number
+                        </td>
+
+                        <td>
+                            @option.OptionText
+                        </td>
+
+                        <td>
+                            @if (option.IsCorrect)
+                            {
+                                <span class="badge bg-success">
+                                    Correct
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">
+                                    Incorrect
+                                </span>
+                            }
+                        </td>
+
+                        <td>
+
+                            <a asp-action="Edit"
+                               asp-route-id="@option.Id"
+                               class="btn btn-sm btn-warning">
+                                Edit
+                            </a>
+
+                            <a asp-action="Delete"
+                               asp-route-id="@option.Id"
+                               class="btn btn-sm btn-danger">
+                                Delete
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                    number++;
+                }
+
+            </tbody>
+
+        </table>
+    }
+
+    <div class="mt-3">
+
+        <a asp-action="Finish"
+           asp-route-questionId="@question.Id"
+           class="btn btn-success">
+            Finish Question
+        </a>
+
+        <a asp-controller="Question"
+           asp-action="Index"
+           asp-route-quizId="@question.QuizId"
+           class="btn btn-secondary">
+            Back to Questions
+        </a>
+
+    </div>
+
+</div>

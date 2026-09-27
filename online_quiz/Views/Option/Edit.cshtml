@@ -1,0 +1,85 @@
+﻿@model online_quiz.Models.Option
+
+@{
+    ViewData["Title"] = "Edit Option";
+}
+
+<div class="container mt-4">
+
+    <h1>Edit Option</h1>
+
+    <p class="text-muted">
+        Question:
+        <strong>@Model.Question.QuestionText</strong>
+    </p>
+
+    <hr />
+
+    <div class="row">
+
+        <div class="col-md-7">
+
+            <form asp-controller="Option"
+                  asp-action="Edit"
+                  method="post">
+
+                <input type="hidden"
+                       asp-for="Id" />
+
+                <input type="hidden"
+                       asp-for="QuestionId" />
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger">
+                </div>
+
+                <div class="mb-3">
+
+                    <label asp-for="OptionText"
+                           class="form-label">
+                        Option
+                    </label>
+
+                    <input asp-for="OptionText"
+                           class="form-control" />
+
+                    <span asp-validation-for="OptionText"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <div class="form-check mb-3">
+
+                    <input asp-for="IsCorrect"
+                           class="form-check-input" />
+
+                    <label asp-for="IsCorrect"
+                           class="form-check-label">
+                        This is the correct answer
+                    </label>
+
+                </div>
+
+                <button type="submit"
+                        class="btn btn-primary">
+                    Save Changes
+                </button>
+
+                <a asp-action="Index"
+                   asp-route-questionId="@Model.QuestionId"
+                   class="btn btn-secondary">
+                    Back to Options
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

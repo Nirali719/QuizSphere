@@ -1,0 +1,61 @@
+﻿@model online_quiz.Models.Question
+
+@{
+    ViewData["Title"] = "Delete Question";
+}
+
+<div class="container mt-4">
+
+    <h1>Delete Question</h1>
+
+    <hr />
+
+    <div class="alert alert-danger">
+
+        <strong>Are you sure you want to delete this question?</strong>
+
+        <br />
+
+        This will also delete all options belonging to this question.
+
+    </div>
+
+    <dl class="row">
+
+        <dt class="col-sm-3">
+            Question
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.QuestionText
+        </dd>
+
+        <dt class="col-sm-3">
+            Marks
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.Marks
+        </dd>
+
+    </dl>
+
+    <form asp-action="Delete" method="post">
+
+        <input type="hidden"
+               asp-for="Id" />
+
+        <button type="submit"
+                class="btn btn-danger">
+            Delete Question
+        </button>
+
+        <a asp-action="Index"
+           asp-route-quizId="@Model.QuizId"
+           class="btn btn-secondary">
+            Cancel
+        </a>
+
+    </form>
+
+</div>

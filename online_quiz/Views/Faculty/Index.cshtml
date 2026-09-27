@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Faculty Dashboard";
+}
+
+<div class="container mt-4">
+
+    <div class="text-center mb-4">
+        <h1>Faculty Dashboard</h1>
+        <p class="lead">
+            Welcome to the Online Quiz Portal Faculty Panel.
+        </p>
+    </div>
+
+    <hr />
+
+    <div class="row mt-4">
+
+        <!-- Create Quiz -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">Create Quiz</h5>
+
+                    <p class="card-text">
+                        Create a new quiz and add questions.
+                    </p>
+
+                    <a asp-controller="Quiz"
+                       asp-action="Create"
+                       class="btn btn-primary">
+                        Create Quiz
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- My Quizzes -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">My Quizzes</h5>
+
+                    <p class="card-text">
+                        View and manage quizzes created by you.
+                    </p>
+
+                    <a asp-controller="Quiz"
+                       asp-action="Index"
+                       class="btn btn-primary">
+                        My Quizzes
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Responses -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">Responses</h5>
+
+                    <p class="card-text">
+                        View participant responses for your quizzes.
+                    </p>
+
+                    <a asp-controller="Quiz"
+                       asp-action="Index"
+                       class="btn btn-primary">
+                        View Responses
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
