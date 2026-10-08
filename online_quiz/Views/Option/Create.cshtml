@@ -5,74 +5,116 @@
     var question = ViewBag.Question as online_quiz.Models.Question;
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Add Option</h1>
+    <!-- Page Header -->
+    <div class="mb-5">
 
-    <p class="text-muted">
-        Question:
-        <strong>@question.QuestionText</strong>
-    </p>
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Question Management
+        </p>
 
-    <hr />
+        <h1 class="fw-semibold mb-2">
+            Add Option
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Add an answer option to the question below.
+        </p>
+
+    </div>
+
+    <!-- Question Reference -->
+    <div class="card border-0 shadow-sm rounded-3 mb-4">
+
+        <div class="card-body p-4">
+
+            <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                Question
+            </p>
+
+            <div class="fw-semibold">
+                @question.QuestionText
+            </div>
+
+        </div>
+
+    </div>
 
     <div class="row">
 
-        <div class="col-md-7">
+        <div class="col-lg-8">
 
-            <form asp-action="Create" method="post">
+            <div class="card border-0 shadow-sm rounded-3">
 
-                <input type="hidden"
-                       asp-for="QuestionId"
-                       value="@question.Id" />
+                <div class="card-body p-4 p-lg-5">
 
-                <div asp-validation-summary="ModelOnly"
-                     class="text-danger">
+                    <form asp-action="Create" method="post">
+
+                        <input type="hidden"
+                               asp-for="QuestionId"
+                               value="@question.Id" />
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="text-danger mb-4">
+                        </div>
+
+                        <!-- Option Text -->
+                        <div class="mb-4">
+
+                            <label asp-for="OptionText"
+                                   class="form-label fw-semibold">
+                                Option
+                            </label>
+
+                            <input asp-for="OptionText"
+                                   class="form-control"
+                                   placeholder="Enter option" />
+
+                            <span asp-validation-for="OptionText"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+                        <!-- Correct Answer -->
+                        <div class="border rounded-3 p-3 mb-4">
+
+                            <div class="form-check">
+
+                                <input asp-for="IsCorrect"
+                                       class="form-check-input" />
+
+                                <label asp-for="IsCorrect"
+                                       class="form-check-label fw-semibold">
+                                    This is the correct answer
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <button type="submit"
+                                    class="btn btn-dark px-4">
+                                Add Option
+                            </button>
+
+                            <a asp-action="Index"
+                               asp-route-questionId="@question.Id"
+                               class="btn btn-outline-dark px-4">
+                                Back to Options
+                            </a>
+
+                        </div>
+
+                    </form>
+
                 </div>
 
-                <!-- Option Text -->
-                <div class="mb-3">
-
-                    <label asp-for="OptionText"
-                           class="form-label">
-                        Option
-                    </label>
-
-                    <input asp-for="OptionText"
-                           class="form-control"
-                           placeholder="Enter option" />
-
-                    <span asp-validation-for="OptionText"
-                          class="text-danger">
-                    </span>
-
-                </div>
-
-                <!-- Correct Answer -->
-                <div class="form-check mb-3">
-
-                    <input asp-for="IsCorrect"
-                           class="form-check-input" />
-
-                    <label asp-for="IsCorrect"
-                           class="form-check-label">
-                        This is the correct answer
-                    </label>
-
-                </div>
-
-                <button type="submit"
-                        class="btn btn-primary">
-                    Add Option
-                </button>
-
-                <a asp-action="Index"
-                   asp-route-questionId="@question.Id"
-                   class="btn btn-secondary">
-                    Back to Options
-                </a>
-
-            </form>
+            </div>
 
         </div>
 

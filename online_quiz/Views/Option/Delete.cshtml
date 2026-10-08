@@ -4,77 +4,143 @@
     ViewData["Title"] = "Delete Option";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Delete Option</h1>
+    <!-- Page Header -->
+    <div class="mb-5">
 
-    <hr />
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Question Management
+        </p>
 
-    <div class="alert alert-danger">
-        <strong>Are you sure you want to delete this option?</strong>
-        <br />
-        This action cannot be undone.
+        <h1 class="fw-semibold mb-2">
+            Delete Option
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Review the option before confirming deletion.
+        </p>
+
     </div>
 
-    <dl class="row">
+    <!-- Warning -->
+    <div class="card border-0 shadow-sm rounded-3 mb-4">
 
-        <dt class="col-sm-3">
-            Question
-        </dt>
+        <div class="card-body p-4">
 
-        <dd class="col-sm-9">
-            @Model.Question.QuestionText
-        </dd>
+            <h5 class="fw-semibold text-danger mb-2">
+                Confirm Option Deletion
+            </h5>
 
-        <dt class="col-sm-3">
-            Option
-        </dt>
+            <p class="text-secondary mb-0">
+                Are you sure you want to delete this option?
+                This action cannot be undone.
+            </p>
 
-        <dd class="col-sm-9">
-            @Model.OptionText
-        </dd>
+        </div>
 
-        <dt class="col-sm-3">
-            Correct Answer
-        </dt>
+    </div>
 
-        <dd class="col-sm-9">
+    <!-- Option Information -->
+    <div class="card border-0 shadow-sm rounded-3 mb-4">
 
-            @if (Model.IsCorrect)
-            {
-                <span class="badge bg-success">
-                    Correct
-                </span>
-            }
-            else
-            {
-                <span class="badge bg-secondary">
-                    Incorrect
-                </span>
-            }
+        <div class="card-body p-4 p-lg-5">
 
-        </dd>
+            <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                Option Information
+            </p>
 
-    </dl>
+            <div class="mb-4">
 
-    <form asp-controller="Option"
-          asp-action="Delete"
-          method="post">
+                <div class="text-secondary small mb-1">
+                    Question
+                </div>
 
-        <input type="hidden"
-               asp-for="Id" />
+                <div class="fw-semibold">
+                    @Model.Question.QuestionText
+                </div>
 
-        <button type="submit"
-                class="btn btn-danger">
-            Delete Option
-        </button>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Option -->
+                <div class="col-md-8">
+
+                    <div class="border rounded-3 p-3 h-100">
+
+                        <div class="text-secondary small mb-1">
+                            Option
+                        </div>
+
+                        <div class="fw-semibold">
+                            @Model.OptionText
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Correct Answer -->
+                <div class="col-md-4">
+
+                    <div class="border rounded-3 p-3 h-100">
+
+                        <div class="text-secondary small mb-1">
+                            Correct Answer
+                        </div>
+
+                        <div>
+
+                            @if (Model.IsCorrect)
+                            {
+                                <span class="badge bg-success">
+                                    Correct
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">
+                                    Incorrect
+                                </span>
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Actions -->
+    <div class="d-flex flex-wrap gap-2">
+
+        <form asp-controller="Option"
+              asp-action="Delete"
+              method="post"
+              class="d-inline">
+
+            <input type="hidden"
+                   asp-for="Id" />
+
+            <button type="submit"
+                    class="btn btn-danger px-4">
+                Delete Option
+            </button>
+
+        </form>
 
         <a asp-action="Index"
            asp-route-questionId="@Model.QuestionId"
-           class="btn btn-secondary">
+           class="btn btn-outline-dark px-4">
             Cancel
         </a>
 
-    </form>
+    </div>
 
 </div>

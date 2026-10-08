@@ -2,110 +2,268 @@
     ViewData["Title"] = "Admin Dashboard";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <div class="text-center mb-4">
-        <h1>Admin Dashboard</h1>
+    <!-- Dashboard Header -->
 
-        <p class="lead">
-            Welcome to the Online Quiz Portal Admin Panel.
+    <div class="mb-5">
+
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Administration
         </p>
+
+        <h1 class="fw-semibold mb-2">
+            Admin Dashboard
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Manage the quiz portal, users, subjects, and participant results
+            from one place.
+        </p>
+
     </div>
 
-    <hr />
 
-    <div class="row mt-4">
+    <!-- Section Heading -->
+
+    <div class="mb-4">
+
+        <h4 class="fw-semibold mb-1">
+            Administration Tools
+        </h4>
+
+        <p class="text-secondary mb-0">
+            Select an option below to manage the portal.
+        </p>
+
+    </div>
+
+
+    <!-- Dashboard Cards -->
+
+    <div class="row g-4">
+
 
         <!-- Subject Management -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
 
-                    <h5 class="card-title">
-                        Subject Management
-                    </h5>
+        <div class="col-md-6">
 
-                    <p class="card-text">
-                        Create, edit, rename, activate or deactivate subjects.
-                    </p>
+            <div class="card h-100 border-0 shadow-sm rounded-3">
 
-                    <a asp-controller="Subject"
-                       asp-action="Index"
-                       class="btn btn-primary">
-                        Manage Subjects
-                    </a>
+                <div class="card-body p-4 p-lg-5 d-flex flex-column">
+
+                    <div class="mb-4">
+
+                        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                            Content
+                        </p>
+
+                        <h5 class="fw-semibold mb-3">
+                            Subject Management
+                        </h5>
+
+                        <p class="text-secondary mb-0">
+                            Create, edit, rename, activate or deactivate
+                            subjects used throughout the quiz portal.
+                        </p>
+
+                    </div>
+
+
+                    <div class="mt-auto">
+
+                        <a asp-controller="Subject"
+                           asp-action="Index"
+                           class="btn btn-dark px-4">
+
+                            Manage Subjects
+
+                        </a>
+
+                    </div>
 
                 </div>
+
             </div>
+
         </div>
+
+        <!-- Category Management -->
+
+            <div class="col-md-6">
+
+                <div class="card h-100 border-0 shadow-sm rounded-3">
+
+                    <div class="card-body p-4 p-lg-5 d-flex flex-column">
+
+                        <div class="mb-4">
+
+                            <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                                Content
+                            </p>
+
+                            <h5 class="fw-semibold mb-3">
+                                Category Management
+                            </h5>
+
+                            <p class="text-secondary mb-0">
+                                Create and manage categories and organize subjects
+                                under the appropriate category.
+                            </p>
+
+                        </div>
+
+
+                        <div class="mt-auto">
+
+                            <a asp-controller="Category"
+                               asp-action="Index"
+                               class="btn btn-dark px-4">
+
+                                Manage Categories
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         <!-- Quiz Management -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
 
-                    <h5 class="card-title">
-                        Quiz Management
-                    </h5>
+        <div class="col-md-6">
 
-                    <p class="card-text">
-                        View quizzes and approve or reject faculty quiz requests.
-                    </p>
+            <div class="card h-100 border-0 shadow-sm rounded-3">
 
-                    <a asp-controller="AdminQuiz"
-                       asp-action="Index"
-                       class="btn btn-primary">
-                        Manage Quizzes
-                    </a>
+                <div class="card-body p-4 p-lg-5 d-flex flex-column">
+
+                    <div class="mb-4">
+
+                        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                            Assessments
+                        </p>
+
+                        <h5 class="fw-semibold mb-3">
+                            Quiz Management
+                        </h5>
+
+                        <p class="text-secondary mb-0">
+                            Review faculty quizzes and approve or reject
+                            quiz requests before they become available.
+                        </p>
+
+                    </div>
+
+
+                    <div class="mt-auto">
+
+                        <a asp-controller="AdminQuiz"
+                           asp-action="Index"
+                           class="btn btn-dark px-4">
+
+                            Manage Quizzes
+
+                        </a>
+
+                    </div>
 
                 </div>
+
             </div>
+
         </div>
+
 
         <!-- Participant Results -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
 
-                    <h5 class="card-title">
-                        Participant Results
-                    </h5>
+        <div class="col-md-6">
 
-                    <p class="card-text">
-                        View results of all participants across all quizzes.
-                    </p>
+            <div class="card h-100 border-0 shadow-sm rounded-3">
 
-                    <a asp-controller="Admin"
-                       asp-action="Results"
-                       class="btn btn-primary">
-                        View Results
-                    </a>
+                <div class="card-body p-4 p-lg-5 d-flex flex-column">
+
+                    <div class="mb-4">
+
+                        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                            Reports
+                        </p>
+
+                        <h5 class="fw-semibold mb-3">
+                            Participant Results
+                        </h5>
+
+                        <p class="text-secondary mb-0">
+                            Review quiz results and detailed performance
+                            records submitted by participants.
+                        </p>
+
+                    </div>
+
+
+                    <div class="mt-auto">
+
+                        <a asp-controller="Admin"
+                           asp-action="Results"
+                           class="btn btn-dark px-4">
+
+                            View Results
+
+                        </a>
+
+                    </div>
 
                 </div>
+
             </div>
+
         </div>
 
+
         <!-- User Management -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
 
-                    <h5 class="card-title">
-                        User Management
-                    </h5>
+        <div class="col-md-6">
 
-                    <p class="card-text">
-                        View Faculty and Participants and activate or deactivate their accounts.
-                    </p>
+            <div class="card h-100 border-0 shadow-sm rounded-3">
 
-                    <a asp-controller="AdminUser"
-                       asp-action="Index"
-                       class="btn btn-primary">
-                        Manage Users
-                    </a>
+                <div class="card-body p-4 p-lg-5 d-flex flex-column">
+
+                    <div class="mb-4">
+
+                        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                            Users
+                        </p>
+
+                        <h5 class="fw-semibold mb-3">
+                            User Management
+                        </h5>
+
+                        <p class="text-secondary mb-0">
+                            View faculty and participant accounts and
+                            manage their active or inactive status.
+                        </p>
+
+                    </div>
+
+
+                    <div class="mt-auto">
+
+                        <a asp-controller="AdminUser"
+                           asp-action="Index"
+                           class="btn btn-dark px-4">
+
+                            Manage Users
+
+                        </a>
+
+                    </div>
 
                 </div>
+
             </div>
+
         </div>
 
 

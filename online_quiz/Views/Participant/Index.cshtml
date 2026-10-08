@@ -2,81 +2,119 @@
     ViewData["Title"] = "Participant Dashboard";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <div class="text-center mb-4">
-        <h1>Participant Dashboard</h1>
+    <!-- Page Header -->
+    <div class="mb-5">
 
-        <p class="lead">
-            Welcome to the Online Quiz Portal Participant Panel.
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Participant Panel
         </p>
+
+        <h1 class="fw-semibold mb-2">
+            Participant Dashboard
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Attempt approved quizzes, review your results, and track your progress.
+        </p>
+
     </div>
 
-    <hr />
-
-    <div class="row mt-4">
+    <!-- Dashboard Cards -->
+    <div class="row g-4">
 
         <!-- Available Quizzes -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
+        <div class="col-md-4">
 
-                    <h5 class="card-title">Available Quizzes</h5>
+            <div class="card border-0 shadow-sm rounded-3 h-100">
 
-                    <p class="card-text">
-                        View approved quizzes and attempt them.
+                <div class="card-body p-4">
+
+                    <p class="text-secondary text-uppercase fw-semibold small mb-3">
+                        Assessments
+                    </p>
+
+                    <h5 class="fw-semibold mb-2">
+                        Available Quizzes
+                    </h5>
+
+                    <p class="text-secondary mb-4">
+                        View approved quizzes by subject and attempt the quizzes available to you.
                     </p>
 
                     <a asp-controller="Participant"
-                       asp-action="Subjects"
-                       class="btn btn-primary">
+                       asp-action="Categories"
+                       class="btn btn-dark px-4">
                         View Quizzes
                     </a>
 
                 </div>
+
             </div>
+
         </div>
 
         <!-- My Results -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
+        <div class="col-md-4">
 
-                    <h5 class="card-title">My Results</h5>
+            <div class="card border-0 shadow-sm rounded-3 h-100">
 
-                    <p class="card-text">
-                        View your quiz results and scores.
+                <div class="card-body p-4">
+
+                    <p class="text-secondary text-uppercase fw-semibold small mb-3">
+                        Performance
+                    </p>
+
+                    <h5 class="fw-semibold mb-2">
+                        My Results
+                    </h5>
+
+                    <p class="text-secondary mb-4">
+                        Review your completed quizzes, scores, percentages, and results.
                     </p>
 
                     <a asp-controller="Participant"
                        asp-action="History"
-                       class="btn btn-primary">
+                       class="btn btn-dark px-4">
                         My Results
                     </a>
 
                 </div>
+
             </div>
+
         </div>
 
         <!-- My Progress -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
+        <div class="col-md-4">
 
-                    <h5 class="card-title">My Progress</h5>
+            <div class="card border-0 shadow-sm rounded-3 h-100">
 
-                    <p class="card-text">
-                        View your subject-wise quiz progress.
+                <div class="card-body p-4">
+
+                    <p class="text-secondary text-uppercase fw-semibold small mb-3">
+                        Analytics
+                    </p>
+
+                    <h5 class="fw-semibold mb-2">
+                        My Progress
+                    </h5>
+
+                    <p class="text-secondary mb-4">
+                        Track your subject-wise quiz performance and overall progress.
                     </p>
 
                     <a asp-controller="Participant"
                        asp-action="Progress"
-                       class="btn btn-primary">
+                       class="btn btn-dark px-4">
                         My Progress
                     </a>
 
                 </div>
+
             </div>
+
         </div>
 
     </div>

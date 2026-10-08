@@ -14,5 +14,9 @@ namespace online_quiz.Models
         public string Description { get; set; }
 
         public bool IsActive { get; set; } = true;
+
+        public int CategoryId { get; set; }
+
+        public Category? Category { get; set; }
     }
 }

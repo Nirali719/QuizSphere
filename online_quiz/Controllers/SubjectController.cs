@@ -19,21 +19,45 @@ namespace online_quiz.Controllers
         public async Task<IActionResult> Index()
         {
             var subjects = await _context.Subjects
-                .OrderBy(s => s.Name)
+                .Include(s => s.Category)
+                .OrderBy(s => s.Category.Name)
+                .ThenBy(s => s.Name)
                 .ToListAsync();
 
             return View(subjects);
         }
+
         // GET: Subject/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create(int categoryId)
         {
-            return View();
+            var category = await _context.Categories.FindAsync(categoryId);
+
+            if (category == null || !category.IsActive)
+            {
+                return NotFound();
+            }
+
+            ViewBag.CategoryName = category.Name;
+
+            return View(new Subject
+            {
+                CategoryId = categoryId
+            });
         }
+
         // POST: Subject/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Subject subject)
         {
+            var category = await _context.Categories
+                .FirstOrDefaultAsync(c => c.Id == subject.CategoryId);
+
+            if (category == null || !category.IsActive)
+            {
+                return NotFound();
+            }
+
             if (ModelState.IsValid)
             {
                 subject.IsActive = true;
@@ -42,13 +66,18 @@ namespace online_quiz.Controllers
 
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(
+                    "Subjects",
+                    "Category",
+                    new { id = subject.CategoryId }
+                );
             }
+
+            ViewBag.CategoryName = category.Name;
 
             return View(subject);
         }
 
-        // GET: Subject/Edit/5
         // GET: Subject/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -57,7 +86,9 @@ namespace online_quiz.Controllers
                 return NotFound();
             }
 
-            var subject = await _context.Subjects.FindAsync(id);
+            var subject = await _context.Subjects
+                .Include(s => s.Category)
+                .FirstOrDefaultAsync(s => s.Id == id);
 
             if (subject == null)
             {
@@ -82,7 +113,9 @@ namespace online_quiz.Controllers
                 return NotFound();
             }
 
-            var existingSubject = await _context.Subjects.FindAsync(id);
+            var existingSubject = await _context.Subjects
+                .Include(s => s.Category)
+                .FirstOrDefaultAsync(s => s.Id == id);
 
             if (existingSubject == null)
             {
@@ -103,6 +136,8 @@ namespace online_quiz.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
+
+            subject.Category = existingSubject.Category;
 
             return View(subject);
         }
@@ -154,9 +189,16 @@ namespace online_quiz.Controllers
                 return NotFound();
             }
 
-            var subject = await _context.Subjects.FindAsync(id);
+            var subject = await _context.Subjects
+                .Include(s => s.Category)
+                .FirstOrDefaultAsync(s => s.Id == id);
 
             if (subject == null)
+            {
+                return NotFound();
+            }
+
+            if (subject.Category == null || !subject.Category.IsActive)
             {
                 return NotFound();
             }

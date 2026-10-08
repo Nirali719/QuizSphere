@@ -4,121 +4,240 @@
     ViewData["Title"] = "All Participant Results";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>All Participant Results</h1>
+    <!-- Page Header -->
 
-    <p class="text-muted">
-        View results of all participants across all quizzes.
-    </p>
+    <div class="mb-5">
 
-    <hr />
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Reports
+        </p>
+
+        <h1 class="fw-semibold mb-2">
+            Participant Results
+        </h1>
+
+        <p class="text-secondary mb-0">
+            View quiz results and performance records of all participants.
+        </p>
+
+    </div>
+
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info">
-            No quiz results are available yet.
+        <!-- Empty State -->
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body text-center py-5">
+
+                <h5 class="fw-semibold mb-2">
+                    No Results Available
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    No quiz results are available yet.
+                </p>
+
+            </div>
+
         </div>
     }
     else
     {
-        <div class="table-responsive">
+        <!-- Results Table -->
 
-            <table class="table table-bordered table-striped">
+        <div class="card border-0 shadow-sm">
 
-                <thead>
-                    <tr>
-                        <th>Participant</th>
-                        <th>Email</th>
-                        <th>Quiz</th>
-                        <th>Subject</th>
-                        <th>Score</th>
-                        <th>Total Marks</th>
-                        <th>Percentage</th>
-                        <th>Result</th>
-                        <th>Attempted On</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
+            <div class="card-body p-0">
 
-                <tbody>
+                <div class="table-responsive">
 
-                    @foreach (var result in Model)
-                    {
-                        <tr>
+                    <table class="table table-hover align-middle mb-0">
 
-                            <td>
-                                @result.QuizAttempt?.Participant?.FullName
-                            </td>
+                        <thead class="table-light">
 
-                            <td>
-                                @result.QuizAttempt?.Participant?.Email
-                            </td>
+                            <tr>
 
-                            <td>
-                                @result.QuizAttempt?.Quiz?.Title
-                            </td>
+                                <th class="px-4 py-3">
+                                    Participant
+                                </th>
 
-                            <td>
-                                @result.QuizAttempt?.Quiz?.Subject?.Name
-                            </td>
+                                <th class="py-3">
+                                    Quiz
+                                </th>
 
-                            <td>
-                                @result.Score
-                            </td>
+                                <th class="py-3">
+                                    Subject
+                                </th>
 
-                            <td>
-                                @result.TotalMarks
-                            </td>
+                                <th class="py-3">
+                                    Score
+                                </th>
 
-                            <td>
-                                @result.Percentage.ToString("0.00")%
-                            </td>
+                                <th class="py-3">
+                                    Percentage
+                                </th>
 
-                            <td>
-                                @if (result.IsPassed)
-                                {
-                                    <span class="badge bg-success">
-                                        PASS
-                                    </span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-danger">
-                                        FAIL
-                                    </span>
-                                }
-                            </td>
+                                <th class="py-3">
+                                    Result
+                                </th>
 
-                            <td>
-                                @result.QuizAttempt?.EndTime?.ToString("dd-MM-yyyy HH:mm")
-                            </td>
+                                <th class="py-3">
+                                    Attempted On
+                                </th>
 
-                            <td>
-                                <a asp-controller="Admin"
-                                   asp-action="ResultDetails"
-                                   asp-route-id="@result.Id"
-                                   class="btn btn-sm btn-primary">
-                                    View Details
-                                </a>
-                            </td>
+                                <th class="py-3 pe-4">
+                                    Details
+                                </th>
 
-                        </tr>
-                    }
+                            </tr>
 
-                </tbody>
+                        </thead>
 
-            </table>
+
+                        <tbody>
+
+                            @foreach (var result in Model)
+                            {
+                                <tr>
+
+                                    <!-- Participant -->
+
+                                    <td class="px-4 py-3">
+
+                                        <div class="fw-semibold">
+                                            @result.QuizAttempt?.Participant?.FullName
+                                        </div>
+
+                                        <div class="text-secondary small mt-1">
+                                            @result.QuizAttempt?.Participant?.Email
+                                        </div>
+
+                                    </td>
+
+
+                                    <!-- Quiz -->
+
+                                    <td class="py-3">
+
+                                        <span class="fw-semibold">
+                                            @result.QuizAttempt?.Quiz?.Title
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Subject -->
+
+                                    <td class="py-3">
+
+                                        <span class="text-secondary">
+                                            @result.QuizAttempt?.Quiz?.Subject?.Name
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Score -->
+
+                                    <td class="py-3">
+
+                                        <span class="fw-semibold">
+                                            @result.Score
+                                        </span>
+
+                                        <span class="text-secondary">
+                                            / @result.TotalMarks
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Percentage -->
+
+                                    <td class="py-3">
+
+                                        <span class="fw-semibold">
+                                            @result.Percentage.ToString("0.00")%
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Result -->
+
+                                    <td class="py-3">
+
+                                        @if (result.IsPassed)
+                                        {
+                                            <span class="badge bg-success">
+                                                PASS
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">
+                                                FAIL
+                                            </span>
+                                        }
+
+                                    </td>
+
+
+                                    <!-- Attempted On -->
+
+                                    <td class="py-3">
+
+                                        <span class="text-secondary">
+                                            @result.QuizAttempt?.EndTime?.ToString("dd-MM-yyyy HH:mm")
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Details -->
+
+                                    <td class="py-3 pe-4">
+
+                                        <a asp-controller="Admin"
+                                           asp-action="ResultDetails"
+                                           asp-route-id="@result.Id"
+                                           class="btn btn-sm btn-outline-dark">
+
+                                            View Details
+
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
 
         </div>
     }
+
+
+    <!-- Back Button -->
 
     <div class="mt-4">
 
         <a asp-controller="Admin"
            asp-action="Index"
-           class="btn btn-secondary">
+           class="btn btn-outline-dark px-4">
+
             Back to Admin Dashboard
+
         </a>
 
     </div>

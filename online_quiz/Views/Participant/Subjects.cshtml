@@ -4,48 +4,81 @@
     ViewData["Title"] = "Select Subject";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Select Subject</h1>
+    <!-- Page Header -->
+    <div class="mb-5">
 
-    <p class="text-muted">
-        Select a subject to view its approved quizzes.
-    </p>
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Quiz Selection
+        </p>
 
-    <hr />
+        <h1 class="fw-semibold mb-2">
+            Select Subject
+        </h1>
+
+        <p class="text-secondary mb-1">
+            Category: <span class="fw-semibold">@ViewBag.CategoryName</span>
+        </p>
+
+        <p class="text-secondary mb-0">
+            Select a subject to view the approved quizzes available to you.
+        </p>
+
+    </div>
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info">
-            No subjects are available at the moment.
+        <div class="card border-0 shadow-sm rounded-3">
+
+            <div class="card-body p-4">
+
+                <h5 class="fw-semibold mb-2">
+                    No Subjects Available
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    No subjects are available at the moment.
+                </p>
+
+            </div>
+
         </div>
     }
     else
     {
-        <div class="row">
+        <div class="row g-4">
 
             @foreach (var subject in Model)
             {
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 col-lg-4">
 
-                    <div class="card h-100">
+                    <div class="card border-0 shadow-sm rounded-3 h-100">
 
-                        <div class="card-body">
+                        <div class="card-body p-4 d-flex flex-column">
 
-                            <h4 class="card-title">
+                            <p class="text-secondary text-uppercase fw-semibold small mb-3">
+                                Subject
+                            </p>
+
+                            <h5 class="fw-semibold mb-2">
                                 @subject.Name
-                            </h4>
+                            </h5>
 
-                            <p class="card-text">
+                            <p class="text-secondary mb-4 flex-grow-1">
                                 @subject.Description
                             </p>
 
-                            <a asp-controller="Participant"
-                               asp-action="Quizzes"
-                               asp-route-subjectId="@subject.Id"
-                               class="btn btn-primary">
-                                View Quizzes
-                            </a>
+                            <div>
+
+                                <a asp-controller="Participant"
+                                   asp-action="Quizzes"
+                                   asp-route-subjectId="@subject.Id"
+                                   class="btn btn-dark px-4">
+                                    View Quizzes
+                                </a>
+
+                            </div>
 
                         </div>
 
@@ -57,12 +90,13 @@
         </div>
     }
 
-    <div class="mt-4">
+    <!-- Back to Dashboard -->
+    <div class="mt-5">
 
         <a asp-controller="Participant"
-           asp-action="Index"
-           class="btn btn-secondary">
-            Back to Dashboard
+           asp-action="Categories"
+           class="btn btn-outline-dark px-4">
+            Back to Categories
         </a>
 
     </div>

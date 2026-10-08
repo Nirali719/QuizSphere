@@ -4,103 +4,204 @@
     ViewData["Title"] = "Delete Quiz";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Delete Quiz</h1>
+    <!-- Page Header -->
+    <div class="mb-5">
 
-    <hr />
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Quiz Management
+        </p>
 
-    <div class="alert alert-danger">
-        <strong>Are you sure you want to delete this quiz?</strong>
-        <br />
-        This action will also remove its questions and options.
+        <h1 class="fw-semibold mb-2">
+            Delete Quiz
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Review the quiz information before confirming deletion.
+        </p>
+
     </div>
 
-    <dl class="row">
+    <!-- Warning -->
+    <div class="card border-0 shadow-sm rounded-3 mb-4">
 
-        <dt class="col-sm-3">
-            Quiz Title
-        </dt>
+        <div class="card-body p-4">
 
-        <dd class="col-sm-9">
-            @Model.Title
-        </dd>
+            <h5 class="fw-semibold text-danger mb-2">
+                Confirm Quiz Deletion
+            </h5>
 
-        <dt class="col-sm-3">
-            Subject
-        </dt>
+            <p class="text-secondary mb-0">
+                Are you sure you want to delete this quiz?
+                This action will also remove its questions and options.
+            </p>
 
-        <dd class="col-sm-9">
-            @Model.Subject?.Name
-        </dd>
+        </div>
 
-        <dt class="col-sm-3">
-            Total Marks
-        </dt>
+    </div>
 
-        <dd class="col-sm-9">
-            @Model.TotalMarks
-        </dd>
+    <!-- Quiz Information -->
+    <div class="card border-0 shadow-sm rounded-3 mb-4">
 
-        <dt class="col-sm-3">
-            Passing Marks
-        </dt>
+        <div class="card-body p-4 p-lg-5">
 
-        <dd class="col-sm-9">
-            @Model.PassingMarks
-        </dd>
+            <div class="mb-4">
 
-        <dt class="col-sm-3">
-            Time Limit
-        </dt>
+                <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                    Quiz Information
+                </p>
 
-        <dd class="col-sm-9">
-            @Model.TimeLimit minutes
-        </dd>
+                <h5 class="fw-semibold mb-0">
+                    @Model.Title
+                </h5>
 
-        <dt class="col-sm-3">
-            Maximum Attempts
-        </dt>
+            </div>
 
-        <dd class="col-sm-9">
-            @if (Model.MaxAttempts == 0)
-            {
-                <span>Unlimited</span>
-            }
-            else
-            {
-                <span>@Model.MaxAttempts</span>
-            }
-        </dd>
+            <div class="row g-4">
 
-        <dt class="col-sm-3">
-            Status
-        </dt>
+                <!-- Subject -->
+                <div class="col-md-6">
 
-        <dd class="col-sm-9">
-            @Model.Status
-        </dd>
+                    <div class="border rounded-3 p-3 h-100">
 
-    </dl>
+                        <div class="text-secondary small mb-1">
+                            Subject
+                        </div>
 
-    <form asp-controller="Quiz"
-          asp-action="Delete"
-          method="post">
-        @Html.AntiForgeryToken()
-        <input type="hidden"
-               asp-for="Id" />
+                        <div class="fw-semibold">
+                            @Model.Subject?.Name
+                        </div>
 
-        <button type="submit"
-                class="btn btn-danger">
-            Delete Quiz
-        </button>
+                    </div>
+
+                </div>
+
+                <!-- Status -->
+                <div class="col-md-6">
+
+                    <div class="border rounded-3 p-3 h-100">
+
+                        <div class="text-secondary small mb-1">
+                            Status
+                        </div>
+
+                        <div class="fw-semibold">
+                            @Model.Status
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Total Marks -->
+                <div class="col-md-6">
+
+                    <div class="border rounded-3 p-3 h-100">
+
+                        <div class="text-secondary small mb-1">
+                            Total Marks
+                        </div>
+
+                        <div class="fw-semibold">
+                            @Model.TotalMarks
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Passing Marks -->
+                <div class="col-md-6">
+
+                    <div class="border rounded-3 p-3 h-100">
+
+                        <div class="text-secondary small mb-1">
+                            Passing Marks
+                        </div>
+
+                        <div class="fw-semibold">
+                            @Model.PassingMarks
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Time Limit -->
+                <div class="col-md-6">
+
+                    <div class="border rounded-3 p-3 h-100">
+
+                        <div class="text-secondary small mb-1">
+                            Time Limit
+                        </div>
+
+                        <div class="fw-semibold">
+                            @Model.TimeLimit minutes
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Maximum Attempts -->
+                <div class="col-md-6">
+
+                    <div class="border rounded-3 p-3 h-100">
+
+                        <div class="text-secondary small mb-1">
+                            Maximum Attempts
+                        </div>
+
+                        <div class="fw-semibold">
+
+                            @if (Model.MaxAttempts == 0)
+                            {
+                                <span>Unlimited</span>
+                            }
+                            else
+                            {
+                                <span>@Model.MaxAttempts</span>
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Actions -->
+    <div class="d-flex flex-wrap gap-2">
+
+        <form asp-controller="Quiz"
+              asp-action="Delete"
+              method="post"
+              class="d-inline">
+
+            @Html.AntiForgeryToken()
+
+            <input type="hidden"
+                   asp-for="Id" />
+
+            <button type="submit"
+                    class="btn btn-danger px-4">
+                Delete Quiz
+            </button>
+
+        </form>
 
         <a asp-action="Index"
-           class="btn btn-secondary">
+           class="btn btn-outline-dark px-4">
             Cancel
         </a>
 
-    </form>
-
+    </div>
 
 </div>

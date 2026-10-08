@@ -25,14 +25,43 @@ namespace online_quiz.Controllers
         {
             return View();
         }
-
-        // GET: Participant/Subjects
-        public async Task<IActionResult> Subjects()
+        // GET: Participant/Categories
+        public async Task<IActionResult> Categories()
         {
+            var categories = await _context.Categories
+                .Where(c => c.IsActive)
+                .OrderBy(c => c.Name)
+                .ToListAsync();
+
+            return View(categories);
+        }
+        // GET: Participant/Subjects
+        public async Task<IActionResult> Subjects(int? categoryId)
+        {
+            if (categoryId == null)
+            {
+                return NotFound();
+            }
+
+            var category = await _context.Categories
+                .FirstOrDefaultAsync(c =>
+                    c.Id == categoryId &&
+                    c.IsActive);
+
+            if (category == null)
+            {
+                return NotFound();
+            }
+
             var subjects = await _context.Subjects
-                .Where(s => s.IsActive)
+                .Where(s =>
+                    s.IsActive &&
+                    s.CategoryId == categoryId)
                 .OrderBy(s => s.Name)
                 .ToListAsync();
+
+            ViewBag.CategoryName = category.Name;
+            ViewBag.CategoryId = category.Id;
 
             return View(subjects);
         }
@@ -49,6 +78,7 @@ namespace online_quiz.Controllers
 
             var quizQuery = _context.Quizzes
                 .Include(q => q.Subject)
+                    .ThenInclude(s => s.Category)
                 .Include(q => q.Faculty)
                 .Where(q => q.Status == "APPROVED");
 

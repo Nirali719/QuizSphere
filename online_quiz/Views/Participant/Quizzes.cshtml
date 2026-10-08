@@ -8,39 +8,59 @@
         ?? new Dictionary<int, int>();
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Available Quizzes</h1>
+    <!-- Page Header -->
+    <div class="mb-5">
 
-    @if (Model.Any())
-    {
-        <p class="text-muted">
-            Showing approved quizzes for the selected subject.
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Quiz Selection
         </p>
-    }
 
+        <h1 class="fw-semibold mb-2">
+            Available Quizzes
+        </h1>
+
+        <p class="text-secondary mb-0">
+            View approved quizzes and attempt the assessments available for you.
+        </p>
+
+    </div>
+
+    <!-- Error Message -->
     @if (TempData["Error"] != null)
     {
-        <div class="alert alert-warning">
+        <div class="alert alert-warning border-0 shadow-sm rounded-3 mb-4">
             @TempData["Error"]
         </div>
     }
 
-    <p class="text-muted">
-        These quizzes have been approved by the Admin and are available for you to attempt.
-    </p>
-
-    <hr />
-
     @if (!Model.Any())
     {
-        <div class="alert alert-info">
-            No approved quizzes are available at the moment.
+        <!-- Empty State -->
+        <div class="card border-0 shadow-sm rounded-3">
+
+            <div class="card-body p-4">
+
+                <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                    Assessments
+                </p>
+
+                <h5 class="fw-semibold mb-2">
+                    No Approved Quizzes Available
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    No approved quizzes are available at the moment.
+                </p>
+
+            </div>
+
         </div>
     }
     else
     {
-        <div class="row">
+        <div class="row g-4">
 
             @foreach (var quiz in Model)
             {
@@ -55,84 +75,153 @@
                     quiz.MaxAttempts > 0 &&
                     attemptCount >= quiz.MaxAttempts;
 
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6">
 
-                    <div class="card h-100">
+                    <div class="card border-0 shadow-sm rounded-3 h-100">
 
-                        <div class="card-body">
+                        <div class="card-body p-4 d-flex flex-column">
 
-                            <h4 class="card-title">
-                                @quiz.Title
-                            </h4>
+                            <!-- Quiz Header -->
+                            <div class="mb-4">
 
-                            <p class="text-muted mb-2">
-                                Subject:
-                                <strong>@quiz.Subject?.Name</strong>
-                            </p>
+                                <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                                    Quiz
+                                </p>
 
-                            <p>
+                                <h4 class="fw-semibold mb-2">
+                                    @quiz.Title
+                                </h4>
+
+                                <p class="text-secondary mb-1">
+                                    Category:
+                                    <strong>@quiz.Subject?.Category?.Name</strong>
+                                </p>
+
+                                <p class="text-secondary mb-0">
+                                    Subject:
+                                    <strong>@quiz.Subject?.Name</strong>
+                                </p>
+
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-secondary mb-4">
                                 @quiz.Description
                             </p>
 
-                            <hr />
+                            <!-- Quiz Details -->
+                            <div class="border rounded-3 p-3 mb-4">
 
-                            <p>
-                                <strong>Total Marks:</strong>
-                                @quiz.TotalMarks
-                            </p>
+                                <div class="row g-3">
 
-                            <p>
-                                <strong>Passing Marks:</strong>
-                                @quiz.PassingMarks
-                            </p>
+                                    <div class="col-6">
 
-                            <p>
-                                <strong>Time Limit:</strong>
-                                @quiz.TimeLimit minutes
-                            </p>
+                                        <div class="text-secondary small">
+                                            Total Marks
+                                        </div>
 
-                            <p>
-                                <strong>Maximum Attempts:</strong>
+                                        <div class="fw-semibold">
+                                            @quiz.TotalMarks
+                                        </div>
 
-                                @if (quiz.MaxAttempts == 0)
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="text-secondary small">
+                                            Passing Marks
+                                        </div>
+
+                                        <div class="fw-semibold">
+                                            @quiz.PassingMarks
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="text-secondary small">
+                                            Time Limit
+                                        </div>
+
+                                        <div class="fw-semibold">
+                                            @quiz.TimeLimit minutes
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="text-secondary small">
+                                            Maximum Attempts
+                                        </div>
+
+                                        <div class="fw-semibold">
+
+                                            @if (quiz.MaxAttempts == 0)
+                                            {
+                                                <span>Unlimited</span>
+                                            }
+                                            else
+                                            {
+                                                <span>@quiz.MaxAttempts</span>
+                                            }
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Attempt Information -->
+                            @if (quiz.MaxAttempts > 0)
+                            {
+                                <div class="mb-4">
+
+                                    <div class="text-secondary small mb-1">
+                                        Your Attempts
+                                    </div>
+
+                                    <div class="fw-semibold">
+                                        @attemptCount / @quiz.MaxAttempts
+                                    </div>
+
+                                </div>
+                            }
+
+                            <!-- Action -->
+                            <div class="mt-auto">
+
+                                @if (maxAttemptsReached)
                                 {
-                                    <span>Unlimited</span>
+                                    <div class="border border-warning rounded-3 p-3">
+
+                                        <div class="fw-semibold mb-1">
+                                            Maximum Attempts Reached
+                                        </div>
+
+                                        <p class="text-secondary mb-0 small">
+                                            You have already used all
+                                            @quiz.MaxAttempts
+                                            attempts for this quiz.
+                                            You cannot attempt this quiz again.
+                                        </p>
+
+                                    </div>
                                 }
                                 else
                                 {
-                                    <span>@quiz.MaxAttempts</span>
+                                    <a asp-controller="Participant"
+                                       asp-action="Attempt"
+                                       asp-route-id="@quiz.Id"
+                                       class="btn btn-dark px-4">
+                                        Attempt Quiz
+                                    </a>
                                 }
-                            </p>
 
-                            @if (quiz.MaxAttempts > 0)
-                            {
-                                <p>
-                                    <strong>Your Attempts:</strong>
-                                    @attemptCount / @quiz.MaxAttempts
-                                </p>
-                            }
-
-                            @if (maxAttemptsReached)
-                            {
-                                <div class="alert alert-warning mt-3">
-                                    <strong>Maximum Attempts Reached</strong>
-                                    <br />
-                                    You have already used all
-                                    @quiz.MaxAttempts
-                                    attempts for this quiz.
-                                    <br />
-                                    You cannot attempt this quiz again.
-                                </div>
-                            }
-                            else
-                            {
-                                <a asp-controller="Participant"
-                                   asp-action="Attempt"
-                                   asp-route-id="@quiz.Id"
-                                   class="btn btn-primary">
-                                    Attempt Quiz
-                                </a>
-                            }
+                            </div>
 
                         </div>
 
@@ -143,5 +232,17 @@
 
         </div>
     }
+
+    <!-- Back -->
+    <div class="mt-5">
+
+        <a asp-controller="Participant"
+           asp-action="Subjects"
+           asp-route-categoryId="@Model.FirstOrDefault()?.Subject?.CategoryId"
+           class="btn btn-outline-dark px-4">
+            Back to Subjects
+        </a>
+
+    </div>
 
 </div>

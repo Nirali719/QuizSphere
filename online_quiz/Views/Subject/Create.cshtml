@@ -4,72 +4,137 @@
     ViewData["Title"] = "Create Subject";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Create Subject</h1>
+    <!-- Page Header -->
 
-    <hr />
+    <div class="mb-5">
+
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Content Management
+        </p>
+
+        <h1 class="fw-semibold mb-2">
+            Create Subject
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Add a new subject inside the selected category.
+        </p>
+
+    </div>
+
+
+    <!-- Form Card -->
 
     <div class="row">
 
-        <div class="col-md-6">
+        <div class="col-md-8 col-lg-7">
 
-            <form asp-action="Create" method="post">
+            <div class="card border-0 shadow-sm">
 
-                <div asp-validation-summary="ModelOnly"
-                     class="text-danger">
+                <div class="card-body p-4 p-lg-5">
+
+                    <form asp-action="Create" method="post">
+
+                        <!-- Validation -->
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="text-danger mb-4">
+                        </div>
+
+
+                        <!-- Category -->
+
+                        <div class="mb-4">
+
+                            <label class="form-label fw-semibold">
+                                Category
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   value="@ViewBag.CategoryName"
+                                   readonly />
+
+                            <input asp-for="CategoryId"
+                                   type="hidden" />
+
+                        </div>
+
+
+                        <!-- Subject Name -->
+
+                        <div class="mb-4">
+
+                            <label asp-for="Name"
+                                   class="form-label fw-semibold">
+
+                                Subject Name
+
+                            </label>
+
+                            <input asp-for="Name"
+                                   class="form-control"
+                                   placeholder="Enter subject name" />
+
+                            <span asp-validation-for="Name"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Description -->
+
+                        <div class="mb-4">
+
+                            <label asp-for="Description"
+                                   class="form-label fw-semibold">
+
+                                Description
+
+                            </label>
+
+                            <textarea asp-for="Description"
+                                      class="form-control"
+                                      rows="5"
+                                      placeholder="Enter subject description"></textarea>
+
+                            <span asp-validation-for="Description"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Buttons -->
+
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <button type="submit"
+                                    class="btn btn-dark px-4">
+
+                                Create Subject
+
+                            </button>
+
+                            <a asp-controller="Category"
+                               asp-action="Subjects"
+                               asp-route-id="@Model.CategoryId"
+                               class="btn btn-outline-dark px-4">
+
+                                Back to Subjects
+
+                            </a>
+
+                        </div>
+
+                    </form>
+
                 </div>
 
-                <!-- Subject Name -->
-                <div class="mb-3">
-
-                    <label asp-for="Name"
-                           class="form-label">
-                        Subject Name
-                    </label>
-
-                    <input asp-for="Name"
-                           class="form-control"
-                           placeholder="Enter subject name" />
-
-                    <span asp-validation-for="Name"
-                          class="text-danger">
-                    </span>
-
-                </div>
-
-                <!-- Description -->
-                <div class="mb-3">
-
-                    <label asp-for="Description"
-                           class="form-label">
-                        Description
-                    </label>
-
-                    <textarea asp-for="Description"
-                              class="form-control"
-                              rows="4"
-                              placeholder="Enter subject description">
-                    </textarea>
-
-                    <span asp-validation-for="Description"
-                          class="text-danger">
-                    </span>
-
-                </div>
-
-                <!-- Buttons -->
-                <button type="submit"
-                        class="btn btn-primary">
-                    Create Subject
-                </button>
-
-                <a asp-action="Index"
-                   class="btn btn-secondary">
-                    Back to Subjects
-                </a>
-
-            </form>
+            </div>
 
         </div>
 
@@ -77,6 +142,9 @@
 
 </div>
 
+
 @section Scripts {
+
     <partial name="_ValidationScriptsPartial" />
+
 }

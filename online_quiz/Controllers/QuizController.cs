@@ -32,6 +32,7 @@ namespace online_quiz.Controllers
 
             var quizzes = await _context.Quizzes
                 .Include(q => q.Subject)
+                    .ThenInclude(s => s.Category)
                 .Where(q => q.FacultyId == faculty.Id)
                 .OrderBy(q => q.Title)
                 .ToListAsync();
@@ -43,8 +44,10 @@ namespace online_quiz.Controllers
         public async Task<IActionResult> Create()
         {
             var subjects = await _context.Subjects
+                .Include(s => s.Category)
                 .Where(s => s.IsActive)
-                .OrderBy(s => s.Name)
+                .OrderBy(s => s.Category.Name)
+                .ThenBy(s => s.Name)
                 .ToListAsync();
 
             ViewBag.Subjects = subjects;
@@ -68,8 +71,10 @@ namespace online_quiz.Controllers
             ModelState.Remove(nameof(Quiz.FacultyId));
 
             var subjects = await _context.Subjects
+                .Include(s => s.Category)
                 .Where(s => s.IsActive)
-                .OrderBy(s => s.Name)
+                .OrderBy(s => s.Category.Name)
+                .ThenBy(s => s.Name)
                 .ToListAsync();
 
             if (!ModelState.IsValid)
@@ -165,8 +170,10 @@ namespace online_quiz.Controllers
             }
 
             var subjects = await _context.Subjects
+                .Include(s => s.Category)
                 .Where(s => s.IsActive)
-                .OrderBy(s => s.Name)
+                .OrderBy(s => s.Category.Name)
+                .ThenBy(s => s.Name)
                 .ToListAsync();
 
             ViewBag.Subjects = subjects;
@@ -222,9 +229,12 @@ namespace online_quiz.Controllers
                 }
             }
 
+            // Load active subjects with their categories
             var subjects = await _context.Subjects
+                .Include(s => s.Category)
                 .Where(s => s.IsActive)
-                .OrderBy(s => s.Name)
+                .OrderBy(s => s.Category.Name)
+                .ThenBy(s => s.Name)
                 .ToListAsync();
 
             ViewBag.Subjects = subjects;
@@ -548,6 +558,7 @@ namespace online_quiz.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
         // GET: Quiz/Responses
         public async Task<IActionResult> Responses(int? id)
         {
@@ -586,6 +597,7 @@ namespace online_quiz.Controllers
 
             return View(results);
         }
+
         // GET: Quiz/ResponseDetails
         public async Task<IActionResult> ResponseDetails(int? id)
         {

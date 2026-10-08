@@ -1,0 +1,75 @@
+﻿@model online_quiz.Models.Category
+
+@{
+    ViewData["Title"] = "Deactivate Category";
+}
+
+<div class="container py-4">
+
+    <div class="mb-5">
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Category Management
+        </p>
+
+        <h1 class="fw-semibold mb-2">
+            Deactivate Category
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Review the category before deactivating it.
+        </p>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-3">
+
+        <div class="card-body p-4">
+
+            <div class="mb-4">
+
+                <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                    Category
+                </p>
+
+                <h4 class="fw-semibold mb-2">
+                    @Model.Name
+                </h4>
+
+                <p class="text-secondary mb-0">
+                    @Model.Description
+                </p>
+
+            </div>
+
+            <div class="alert alert-warning border-0">
+                Deactivating this category will also deactivate all subjects
+                belonging to this category.
+            </div>
+
+            <form asp-action="Delete" method="post">
+
+                @Html.AntiForgeryToken()
+
+                <input type="hidden" asp-for="Id" />
+
+                <div class="d-flex gap-2">
+
+                    <button type="submit"
+                            class="btn btn-outline-danger px-4">
+                        Deactivate Category
+                    </button>
+
+                    <a asp-controller="Category"
+                       asp-action="Index"
+                       class="btn btn-outline-dark px-4">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

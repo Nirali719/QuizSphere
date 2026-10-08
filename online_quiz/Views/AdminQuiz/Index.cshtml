@@ -4,178 +4,307 @@
     ViewData["Title"] = "Manage Quizzes";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <div class="d-flex justify-content-between align-items-center mb-3">
+    <!-- Page Header -->
 
-        <div>
-            <h1>Manage Quizzes</h1>
-            <p class="text-muted">
-                View and manage all quizzes submitted by Faculty.
-            </p>
-        </div>
+    <div class="mb-5">
+
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Assessments
+        </p>
+
+        <h1 class="fw-semibold mb-2">
+            Manage Quizzes
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Review quizzes submitted by Faculty and manage their approval status.
+        </p>
 
     </div>
 
-    <hr />
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info">
-            No quizzes have been created yet.
+        <!-- Empty State -->
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body text-center py-5">
+
+                <h5 class="fw-semibold mb-2">
+                    No Quizzes Available
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    No quizzes have been created yet.
+                </p>
+
+            </div>
+
         </div>
     }
     else
     {
-        <table class="table table-bordered table-striped">
+        <!-- Quiz Table -->
 
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Quiz</th>
-                    <th>Subject</th>
-                    <th>Faculty</th>
-                    <th>Total Marks</th>
-                    <th>Passing Marks</th>
-                    <th>Time</th>
-                    <th>Max Attempts</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
+        <div class="card border-0 shadow-sm">
 
-            <tbody>
+            <div class="card-body p-0">
 
-                @{
-                    int number = 1;
-                }
+                <div class="table-responsive">
 
-                @foreach (var quiz in Model)
-                {
-                    <tr>
+                    <table class="table table-hover align-middle mb-0">
 
-                        <td>@number</td>
+                        <thead class="table-light">
 
-                        <td>
-                            <strong>@quiz.Title</strong>
-                            <br />
-                            <small class="text-muted">
-                                @quiz.Description
-                            </small>
-                        </td>
+                            <tr>
 
-                        <td>
-                            @quiz.Subject?.Name
-                        </td>
+                                <th class="px-4 py-3">
+                                    #
+                                </th>
 
-                        <td>
-                            @quiz.Faculty?.FullName
-                        </td>
+                                <th class="py-3">
+                                    Quiz
+                                </th>
 
-                        <td>
-                            @quiz.TotalMarks
-                        </td>
+                                <th class="py-3">
+                                    Subject
+                                </th>
 
-                        <td>
-                            @quiz.PassingMarks
-                        </td>
+                                <th class="py-3">
+                                    Faculty
+                                </th>
 
-                        <td>
-                            @quiz.TimeLimit min
-                        </td>
+                                <th class="py-3">
+                                    Marks
+                                </th>
 
-                        <td>
-                            @if (quiz.MaxAttempts == 0)
-                            {
-                                <span>Unlimited</span>
-                            }
-                            else
-                            {
-                                <span>@quiz.MaxAttempts</span>
-                            }
-                        </td>
+                                <th class="py-3">
+                                    Time
+                                </th>
 
-                        <td>
+                                <th class="py-3">
+                                    Attempts
+                                </th>
 
-                            @if (quiz.Status == "PENDING")
-                            {
-                                <span class="badge bg-warning text-dark">
-                                    PENDING
-                                </span>
+                                <th class="py-3">
+                                    Status
+                                </th>
+
+                                <th class="py-3 pe-4">
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            @{
+                                int number = 1;
                             }
 
-                            else if (quiz.Status == "APPROVED")
+                            @foreach (var quiz in Model)
                             {
-                                <span class="badge bg-success">
-                                    APPROVED
-                                </span>
+                                <tr>
+
+                                    <!-- Number -->
+
+                                    <td class="px-4 py-3 text-secondary">
+                                        @number
+                                    </td>
+
+
+                                    <!-- Quiz -->
+
+                                    <td class="py-3">
+
+                                        <div class="fw-semibold">
+                                            @quiz.Title
+                                        </div>
+
+                                        <div class="text-secondary small mt-1">
+                                            @quiz.Description
+                                        </div>
+
+                                    </td>
+
+
+                                    <!-- Subject -->
+
+                                    <td class="py-3">
+
+                                        <span class="fw-semibold">
+                                            @quiz.Subject?.Name
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Faculty -->
+
+                                    <td class="py-3">
+
+                                        <span class="text-secondary">
+                                            @quiz.Faculty?.FullName
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Marks -->
+
+                                    <td class="py-3">
+
+                                        <div>
+                                            <span class="fw-semibold">
+                                                @quiz.TotalMarks
+                                            </span>
+                                            <span class="text-secondary small">
+                                                total
+                                            </span>
+                                        </div>
+
+                                        <div class="text-secondary small">
+                                            Pass: @quiz.PassingMarks
+                                        </div>
+
+                                    </td>
+
+
+                                    <!-- Time -->
+
+                                    <td class="py-3">
+
+                                        <span class="text-secondary">
+                                            @quiz.TimeLimit min
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Attempts -->
+
+                                    <td class="py-3">
+
+                                        @if (quiz.MaxAttempts == 0)
+                                        {
+                                            <span class="text-secondary">
+                                                Unlimited
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span>
+                                                @quiz.MaxAttempts
+                                            </span>
+                                        }
+
+                                    </td>
+
+
+                                    <!-- Status -->
+
+                                    <td class="py-3">
+
+                                        @if (quiz.Status == "PENDING")
+                                        {
+                                            <span class="badge bg-warning text-dark">
+                                                PENDING
+                                            </span>
+                                        }
+                                        else if (quiz.Status == "APPROVED")
+                                        {
+                                            <span class="badge bg-success">
+                                                APPROVED
+                                            </span>
+                                        }
+                                        else if (quiz.Status == "REJECTED")
+                                        {
+                                            <span class="badge bg-danger">
+                                                REJECTED
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">
+                                                @quiz.Status
+                                            </span>
+                                        }
+
+                                    </td>
+
+
+                                    <!-- Actions -->
+
+                                    <td class="py-3 pe-4">
+
+                                        @if (quiz.Status == "PENDING")
+                                        {
+                                            <div class="d-flex flex-wrap gap-2">
+
+                                                <form asp-controller="AdminQuiz"
+                                                      asp-action="Approve"
+                                                      asp-route-id="@quiz.Id"
+                                                      method="post">
+
+                                                    @Html.AntiForgeryToken()
+
+                                                    <button type="submit"
+                                                            class="btn btn-sm btn-outline-success">
+
+                                                        Approve
+
+                                                    </button>
+
+                                                </form>
+
+
+                                                <form asp-controller="AdminQuiz"
+                                                      asp-action="Reject"
+                                                      asp-route-id="@quiz.Id"
+                                                      method="post">
+
+                                                    @Html.AntiForgeryToken()
+
+                                                    <button type="submit"
+                                                            class="btn btn-sm btn-outline-danger">
+
+                                                        Reject
+
+                                                    </button>
+
+                                                </form>
+
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-secondary small">
+                                                No action
+                                            </span>
+                                        }
+
+                                    </td>
+
+                                </tr>
+
+                                number++;
                             }
-                            else if (quiz.Status == "REJECTED")
-                            {
-                                <span class="badge bg-danger">
-                                    REJECTED
-                                </span>
-                            }
-                            else
-                            {
-                                <span class="badge bg-secondary">
-                                    @quiz.Status
-                                </span>
-                            }
 
-                        </td>
+                        </tbody>
 
-                        <td>
+                    </table>
 
-                            @if (quiz.Status == "PENDING")
-                            {
-                                <form asp-controller="AdminQuiz"
-                                      asp-action="Approve"
-                                      asp-route-id="@quiz.Id"
-                                      method="post"
-                                      style="display:inline;">
+                </div>
 
-                                    @Html.AntiForgeryToken()
+            </div>
 
-                                    <button type="submit"
-                                            class="btn btn-sm btn-success">
-                                        Approve
-                                    </button>
-
-                                </form>
-
-                                <form asp-controller="AdminQuiz"
-                                      asp-action="Reject"
-                                      asp-route-id="@quiz.Id"
-                                      method="post"
-                                      style="display:inline;">
-
-                                    @Html.AntiForgeryToken()
-
-                                    <button type="submit"
-                                            class="btn btn-sm btn-danger">
-                                        Reject
-                                    </button>
-
-                                </form>
-                            }
-                            else
-                            {
-                                <span class="text-muted">
-                                    No action
-                                </span>
-                            }
-
-                        </td>
-
-                    </tr>
-
-                    number++;
-                }
-
-            </tbody>
-
-        </table>
+        </div>
     }
 
 </div>

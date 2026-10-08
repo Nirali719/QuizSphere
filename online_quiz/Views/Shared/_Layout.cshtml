@@ -3,30 +3,38 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - online_quiz</title>
-    <script type="importmap"></script>
+
+    <title>@ViewData["Title"] - QuizSphere</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/online_quiz.styles.css" asp-append-version="true" />
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+<body class="d-flex flex-column min-vh-100">
 
-                <a class="navbar-brand"
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+
+            <div class="container">
+
+                <!-- Brand -->
+                <a class="navbar-brand fw-semibold"
                    asp-area=""
                    asp-controller="Home"
                    asp-action="Index">
-                    online_quiz
+
+                    QuizSphere
+
                 </a>
 
+                <!-- Mobile Menu Button -->
                 <button class="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target=".navbar-collapse"
-                        aria-controls="navbarSupportedContent"
+                        data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar"
                         aria-expanded="false"
                         aria-label="Toggle navigation">
 
@@ -34,56 +42,136 @@
 
                 </button>
 
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <!-- Navigation -->
+                <div class="collapse navbar-collapse"
+                     id="mainNavbar">
 
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark"
+
+                            <a class="nav-link"
                                asp-area=""
                                asp-controller="Home"
                                asp-action="Index">
+
                                 Home
+
                             </a>
+
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark"
-                               asp-area=""
-                               asp-controller="Home"
-                               asp-action="Privacy">
-                                Privacy
-                            </a>
-                        </li>
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            @if (User.IsInRole("ADMIN"))
+                            {
+                                <li class="nav-item">
+
+                                    <a class="nav-link"
+                                       asp-controller="Admin"
+                                       asp-action="Index">
+
+                                        Dashboard
+
+                                    </a>
+
+                                </li>
+                            }
+
+                            @if (User.IsInRole("FACULTY"))
+                            {
+                                <li class="nav-item">
+
+                                    <a class="nav-link"
+                                       asp-controller="Faculty"
+                                       asp-action="Index">
+
+                                        Dashboard
+
+                                    </a>
+
+                                </li>
+                            }
+
+                            @if (User.IsInRole("PARTICIPANT"))
+                            {
+                                <li class="nav-item">
+
+                                    <a class="nav-link"
+                                       asp-controller="Participant"
+                                       asp-action="Index">
+
+                                        Dashboard
+
+                                    </a>
+
+                                </li>
+                            }
+                        }
 
                     </ul>
 
-                    <partial name="_LoginPartial" />
+                    <!-- Login / User Section -->
+                    <div class="d-flex align-items-center">
+
+                        <partial name="_LoginPartial" />
+
+                    </div>
 
                 </div>
+
             </div>
+
         </nav>
+
     </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - online_quiz -
-            <a asp-area=""
-               asp-controller="Home"
-               asp-action="Privacy">
-                Privacy
-            </a>
+    <!-- Main Content -->
+
+    <main role="main" class="flex-grow-1">
+
+        <div class="container py-4">
+
+            @RenderBody()
+
         </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer class="border-top bg-dark text-light">
+
+        <div class="container py-3">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <span class="text-light">
+                    &copy; 2026 QuizSphere
+                </span>
+
+                <a class="text-decoration-none text-light"
+                   asp-area=""
+                   asp-controller="Home"
+                   asp-action="Privacy">
+
+                    Privacy
+
+                </a>
+
+            </div>
+
+        </div>
+
     </footer>
 
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)

@@ -13,6 +13,8 @@ namespace online_quiz.Data
 
         public DbSet<Subject> Subjects { get; set; }
 
+        public DbSet<Category> Categories { get; set; }
+
         public DbSet<Quiz> Quizzes { get; set; }
 
         public DbSet<Question> Questions { get; set; }

@@ -8,150 +8,238 @@
         ?? new Dictionary<string, string>();
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>User Management</h1>
+    <!-- Page Header -->
 
-    <p class="text-muted">
-        View and manage registered Faculty and Participants.
-    </p>
+    <div class="mb-5">
 
-    <hr />
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Users
+        </p>
+
+        <h1 class="fw-semibold mb-2">
+            User Management
+        </h1>
+
+        <p class="text-secondary mb-0">
+            View registered Faculty and Participants and manage their
+            account status.
+        </p>
+
+    </div>
+
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info">
-            No Faculty or Participants are registered yet.
+        <!-- Empty State -->
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body text-center py-5">
+
+                <h5 class="fw-semibold mb-2">
+                    No Users Available
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    No Faculty or Participants are registered yet.
+                </p>
+
+            </div>
+
         </div>
     }
     else
     {
-        <div class="table-responsive">
+        <!-- User Table -->
 
-            <table class="table table-bordered table-striped">
+        <div class="card border-0 shadow-sm">
 
-                <thead>
-                    <tr>
-                        <th>Full Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
+            <div class="card-body p-0">
 
-                <tbody>
+                <div class="table-responsive">
 
-                    @foreach (var user in Model)
-                    {
-                        string role = "Unknown";
+                    <table class="table table-hover align-middle mb-0">
 
-                        if (userRoles.ContainsKey(user.Id))
-                        {
-                            role = userRoles[user.Id];
-                        }
+                        <thead class="table-light">
 
-                        <tr>
+                            <tr>
 
-                            <td>
-                                @user.FullName
-                            </td>
+                                <th class="px-4 py-3">
+                                    Full Name
+                                </th>
 
-                            <td>
-                                @user.Email
-                            </td>
+                                <th class="py-3">
+                                    Email
+                                </th>
 
-                            <td>
-                                @if (role == "FACULTY")
+                                <th class="py-3">
+                                    Role
+                                </th>
+
+                                <th class="py-3">
+                                    Status
+                                </th>
+
+                                <th class="py-3 pe-4">
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            @foreach (var user in Model)
+                            {
+                                string role = "Unknown";
+
+                                if (userRoles.ContainsKey(user.Id))
                                 {
-                                    <span class="badge bg-primary">
-                                        FACULTY
-                                    </span>
-                                }
-                                else if (role == "PARTICIPANT")
-                                {
-                                    <span class="badge bg-info text-dark">
-                                        PARTICIPANT
-                                    </span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-secondary">
-                                        @role
-                                    </span>
-                                }
-                            </td>
-
-                            <td>
-                                @if (user.IsActive)
-                                {
-                                    <span class="badge bg-success">
-                                        ACTIVE
-                                    </span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-danger">
-                                        INACTIVE
-                                    </span>
-                                }
-                            </td>
-
-                            <td>
-
-                                @if (user.IsActive)
-                                {
-                                    <form asp-controller="AdminUser"
-                                          asp-action="Deactivate"
-                                          asp-route-id="@user.Id"
-                                          method="post"
-                                          style="display:inline;">
-
-                                        @Html.AntiForgeryToken()
-
-                                        <button type="submit"
-                                                class="btn btn-sm btn-danger">
-                                            Deactivate
-                                        </button>
-
-                                    </form>
-                                }
-                                else
-                                {
-                                    <form asp-controller="AdminUser"
-                                          asp-action="Activate"
-                                          asp-route-id="@user.Id"
-                                          method="post"
-                                          style="display:inline;">
-
-                                        @Html.AntiForgeryToken()
-
-                                        <button type="submit"
-                                                class="btn btn-sm btn-success">
-                                            Activate
-                                        </button>
-
-                                    </form>
+                                    role = userRoles[user.Id];
                                 }
 
-                            </td>
+                                <tr>
 
-                        </tr>
-                    }
+                                    <!-- Full Name -->
 
-                </tbody>
+                                    <td class="px-4 py-3">
 
-            </table>
+                                        <span class="fw-semibold">
+                                            @user.FullName
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Email -->
+
+                                    <td class="py-3">
+
+                                        <span class="text-secondary">
+                                            @user.Email
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Role -->
+
+                                    <td class="py-3">
+
+                                        @if (role == "FACULTY")
+                                        {
+                                            <span class="badge bg-secondary">
+                                                FACULTY
+                                            </span>
+                                        }
+                                        else if (role == "PARTICIPANT")
+                                        {
+                                            <span class="badge bg-secondary">
+                                                PARTICIPANT
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">
+                                                @role
+                                            </span>
+                                        }
+
+                                    </td>
+
+
+                                    <!-- Status -->
+
+                                    <td class="py-3">
+
+                                        @if (user.IsActive)
+                                        {
+                                            <span class="badge bg-success">
+                                                ACTIVE
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">
+                                                INACTIVE
+                                            </span>
+                                        }
+
+                                    </td>
+
+
+                                    <!-- Action -->
+
+                                    <td class="py-3 pe-4">
+
+                                        @if (user.IsActive)
+                                        {
+                                            <form asp-controller="AdminUser"
+                                                  asp-action="Deactivate"
+                                                  asp-route-id="@user.Id"
+                                                  method="post">
+
+                                                @Html.AntiForgeryToken()
+
+                                                <button type="submit"
+                                                        class="btn btn-sm btn-outline-danger">
+
+                                                    Deactivate
+
+                                                </button>
+
+                                            </form>
+                                        }
+                                        else
+                                        {
+                                            <form asp-controller="AdminUser"
+                                                  asp-action="Activate"
+                                                  asp-route-id="@user.Id"
+                                                  method="post">
+
+                                                @Html.AntiForgeryToken()
+
+                                                <button type="submit"
+                                                        class="btn btn-sm btn-outline-success">
+
+                                                    Activate
+
+                                                </button>
+
+                                            </form>
+                                        }
+
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
 
         </div>
     }
+
+
+    <!-- Back Button -->
 
     <div class="mt-4">
 
         <a asp-controller="Admin"
            asp-action="Index"
-           class="btn btn-secondary">
+           class="btn btn-outline-dark px-4">
+
             Back to Admin Dashboard
+
         </a>
 
     </div>

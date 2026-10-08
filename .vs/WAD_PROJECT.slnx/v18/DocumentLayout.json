@@ -3,68 +3,228 @@
   "WorkspaceRootPath": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\subject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\subject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\subjects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\subjects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\quizzes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\quizzes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\faculty\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\faculty\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\responses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\responses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\responsedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\responsedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\admin\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\admin\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\quizzes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\quizzes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\admin\\resultdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\admin\\resultdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\participantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\participantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\subject\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\subject\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\subject\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\subject\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\subject\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\subject\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\category\\subjects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\category\\subjects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\subject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\subject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\subjects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\subjects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\categories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\categories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\migrations\\20261001171042_addcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\migrations\\20261001171042_addcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\progress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\progress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\attempt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\attempt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\participantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\participantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\option\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\option\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\option\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\option\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\option\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\option\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\option\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\option\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\question\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\question\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\question\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\question\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\question\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\question\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\question\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\question\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\responsedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\responsedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\responses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\responses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\faculty\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\faculty\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\admin\\resultdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\admin\\resultdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\admin\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\admin\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\adminuser\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\adminuser\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\adminquiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\adminquiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\areas\\identity\\pages\\account\\resendemailconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\areas\\identity\\pages\\account\\resendemailconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\areas\\identity\\pages\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\areas\\identity\\pages\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\models\\studentanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,28 +235,8 @@
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\optioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\adminquiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\adminquiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\adminquizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\adminquizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\adminuser\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\adminuser\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -109,22 +249,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\progress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\progress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\participant\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\participant\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -142,52 +266,8 @@
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\option\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\option\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\option\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\option\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\option\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\option\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\question\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\question\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\question\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\question\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\question\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\question\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\option\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\option\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\question\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\question\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\views\\quiz\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\views\\quiz\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\patel\\AppData\\Local\\Temp\\SQLQuery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
@@ -201,10 +281,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -224,10 +300,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\migrations\\20260918045121_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\migrations\\20260918045121_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Migrations\\20260918044851_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -254,10 +326,6 @@
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\models\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|c:\\users\\patel\\source\\repos\\wad_project\\online_quiz\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{230967D0-EC35-07D4-0508-7FF826497EDE}|online_quiz\\online_quiz.csproj|solutionrelative:online_quiz\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -273,47 +341,251 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 57,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Categories.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Categories.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Views\\Participant\\Categories.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Categories.cshtml",
+              "RelativeToolTip": "online_quiz\\Views\\Participant\\Categories.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAG8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-01T18:01:40.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Subjects.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Category\\Subjects.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Views\\Category\\Subjects.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Category\\Subjects.cshtml",
+              "RelativeToolTip": "online_quiz\\Views\\Category\\Subjects.cshtml",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAAAMAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-01T17:44:33.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Category\\Delete.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Views\\Category\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Category\\Delete.cshtml",
+              "RelativeToolTip": "online_quiz\\Views\\Category\\Delete.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-01T17:42:20.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Category\\Edit.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Views\\Category\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Category\\Edit.cshtml",
+              "RelativeToolTip": "online_quiz\\Views\\Category\\Edit.cshtml",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAAF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-01T17:41:52.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Views\\Category\\Create.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "online_quiz\\Views\\Category\\Create.cshtml",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAAF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-01T17:40:38.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "online_quiz\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAAAMQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-01T17:40:18.801Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "online_quiz\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "online_quiz\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAuwNEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-01T17:37:03.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "20261001171042_AddCategory.cs",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Migrations\\20261001171042_AddCategory.cs",
+              "RelativeDocumentMoniker": "online_quiz\\Migrations\\20261001171042_AddCategory.cs",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Migrations\\20261001171042_AddCategory.cs",
+              "RelativeToolTip": "online_quiz\\Migrations\\20261001171042_AddCategory.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-01T17:10:42.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "online_quiz\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\Category.cs",
+              "RelativeToolTip": "online_quiz\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-01T17:08:10.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Subject\\Delete.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Views\\Subject\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Subject\\Delete.cshtml",
+              "RelativeToolTip": "online_quiz\\Views\\Subject\\Delete.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAJIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T06:51:44.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Subject\\Edit.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Views\\Subject\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Subject\\Edit.cshtml",
+              "RelativeToolTip": "online_quiz\\Views\\Subject\\Edit.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T06:51:05.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Subject\\Create.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Views\\Subject\\Create.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Subject\\Create.cshtml",
+              "RelativeToolTip": "online_quiz\\Views\\Subject\\Create.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T06:50:22.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ResendEmailConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+              "RelativeToolTip": "online_quiz\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAIwGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T06:38:45.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "online_quiz\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAuwGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T06:37:13.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "online_quiz\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAIwJ0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T06:24:15.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "online_quiz\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "online_quiz\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAuwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-29T05:48:29.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "online_quiz\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "online_quiz\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T05:44:38.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Faculty\\Index.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Faculty\\Index.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Faculty\\Index.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Faculty\\Index.cshtml",
-              "ViewState": "AgIAADsAAAAAAAAAAAAuwEwAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAAH4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-27T05:04:49.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 39,
               "Title": "ResponseDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\ResponseDetails.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Quiz\\ResponseDetails.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\ResponseDetails.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Quiz\\ResponseDetails.cshtml",
-              "ViewState": "AgIAAAEBAAAAAAAAAAAAABgBAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAJ4BAAAAAAAAAAAqwLUBAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-27T05:01:39.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 43,
               "Title": "ResultDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Admin\\ResultDetails.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Admin\\ResultDetails.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Admin\\ResultDetails.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Admin\\ResultDetails.cshtml",
-              "ViewState": "AgIAAAABAAAAAAAAAAAQwBQBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMUBAAAAAAAAAAAuwNsBAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-27T04:53:09.697Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 61,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "online_quiz\\wwwroot\\js\\site.js",
@@ -325,43 +597,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 53,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFsAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-25T17:58:39.904Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 54,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Shared\\_LoginPartial.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAADEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwDEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-25T17:58:11.275Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "Subjects.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Subjects.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Participant\\Subjects.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Subjects.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Participant\\Subjects.cshtml",
-              "ViewState": "AgIAADgAAAAAAAAAAADwv0MAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAAGMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-25T16:33:30.075Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 55,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "online_quiz\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
@@ -373,19 +645,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 45,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\AdminUser\\Index.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\AdminUser\\Index.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\AdminUser\\Index.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\AdminUser\\Index.cshtml",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAswIYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAN8AAAAAAAAAAAAAAOsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-25T16:15:47.023Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 59,
               "Title": "AdminUserController.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\AdminUserController.cs",
               "RelativeDocumentMoniker": "online_quiz\\Controllers\\AdminUserController.cs",
@@ -397,92 +669,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Admin\\Index.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Admin\\Index.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwG0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAswFwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-25T16:10:23.759Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 44,
               "Title": "Results.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Admin\\Results.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Admin\\Results.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Admin\\Results.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Admin\\Results.cshtml",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAQwHIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAAAPQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-25T15:57:21.892Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 40,
               "Title": "Responses.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\Responses.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Quiz\\Responses.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\Responses.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Quiz\\Responses.cshtml",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAAAHUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALwAAAAAAAAAAAAwwNUAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-25T12:19:04.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 27,
               "Title": "Progress.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Progress.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Participant\\Progress.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Progress.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Participant\\Progress.cshtml",
-              "ViewState": "AgIAADgAAAAAAAAAAAAwwFEAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAAAIMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-25T12:14:19.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Index.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Participant\\Index.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Index.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Participant\\Index.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFMAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-25T12:08:37.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-25T12:08:37.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 28,
               "Title": "History.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\History.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Participant\\History.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\History.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Participant\\History.cshtml",
-              "ViewState": "AgIAAFAAAAAAAAAAAADwv2IAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAAALQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-25T12:06:12.933Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "Result.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Result.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Participant\\Result.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Result.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Participant\\Result.cshtml",
-              "ViewState": "AgIAANsAAAAAAAAAAAAuwO8AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAGIBAAAAAAAAAAAAAHIBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-25T03:22:36.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 64,
               "Title": "dbo.QuizAttempts.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/OnlineQuizDB/True/SqlTable/dbo.QuizAttempts.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/OnlineQuizDB/True/SqlTable/dbo.QuizAttempts.sql",
@@ -491,67 +762,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 29,
               "Title": "Attempt.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Attempt.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Participant\\Attempt.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Attempt.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Participant\\Attempt.cshtml",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAQwJsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAANUAAAAAAAAAAAAAAOsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-24T18:29:59.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Quizzes.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Quizzes.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Participant\\Quizzes.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Participant\\Quizzes.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Participant\\Quizzes.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAAPAAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-24T17:38:40.302Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
               "Title": "ParticipantController.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\ParticipantController.cs",
               "RelativeDocumentMoniker": "online_quiz\\Controllers\\ParticipantController.cs",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\ParticipantController.cs",
               "RelativeToolTip": "online_quiz\\Controllers\\ParticipantController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL4BAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAUwFAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-24T17:20:46.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 46,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\AdminQuiz\\Index.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\AdminQuiz\\Index.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\AdminQuiz\\Index.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\AdminQuiz\\Index.cshtml",
-              "ViewState": "AgIAAIoAAAAAAAAAAADwv6AAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAB8BAAAAAAAAAAAuwDUBAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-24T17:03:06.907Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "online_quiz\\Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\AdminController.cs",
               "RelativeToolTip": "online_quiz\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAIwEcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAEcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-24T17:01:07.446Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 58,
               "Title": "AdminQuizController.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\AdminQuizController.cs",
               "RelativeDocumentMoniker": "online_quiz\\Controllers\\AdminQuizController.cs",
@@ -563,103 +834,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 41,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\Delete.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Quiz\\Delete.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\Delete.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Quiz\\Delete.cshtml",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAIwFgAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAALUAAAAAAAAAAAAwwM4AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T08:01:37.197Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 5,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\Edit.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Quiz\\Edit.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\Edit.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Quiz\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAAAPsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T07:41:19.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 31,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Option\\Delete.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Option\\Delete.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Option\\Delete.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Option\\Delete.cshtml",
-              "ViewState": "AgIAADgAAAAAAAAAAAAYwEkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAwwIsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T07:34:17.894Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 32,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Option\\Edit.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Option\\Edit.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Option\\Edit.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Option\\Edit.cshtml",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAcwFQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAwwIAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T07:24:17.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 35,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Question\\Delete.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Question\\Delete.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Question\\Delete.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Question\\Delete.cshtml",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAADwAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAwwGkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T06:56:06.656Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 36,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Question\\Edit.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Question\\Edit.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Question\\Edit.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Question\\Edit.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAwwH0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T06:54:07.541Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 33,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Option\\Create.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Option\\Create.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Option\\Create.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Option\\Create.cshtml",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAwwH4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T06:38:14.488Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 34,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Option\\Index.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Option\\Index.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Option\\Index.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Option\\Index.cshtml",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGQAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAwwNYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T06:36:37.97Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 57,
               "Title": "OptionController.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\OptionController.cs",
               "RelativeDocumentMoniker": "online_quiz\\Controllers\\OptionController.cs",
@@ -671,7 +942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 83,
               "Title": "20260919062453_AddQuestionOptions.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Migrations\\20260919062453_AddQuestionOptions.cs",
               "RelativeDocumentMoniker": "online_quiz\\Migrations\\20260919062453_AddQuestionOptions.cs",
@@ -683,104 +954,104 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 37,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Question\\Create.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Question\\Create.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Question\\Create.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Question\\Create.cshtml",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAwFIAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAwwHQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T06:13:24.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 38,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Question\\Index.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Question\\Index.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Question\\Index.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Question\\Index.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAwFMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAwwLMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T06:11:42.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 30,
               "Title": "QuestionController.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\QuestionController.cs",
               "RelativeDocumentMoniker": "online_quiz\\Controllers\\QuestionController.cs",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\QuestionController.cs",
               "RelativeToolTip": "online_quiz\\Controllers\\QuestionController.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAwwPkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEsBAAAAAAAAAAAIwFcBAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-19T06:07:29.578Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 6,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\Create.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Quiz\\Create.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\Create.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Quiz\\Create.cshtml",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAAAMAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAAAPkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T05:51:03.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\Index.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Quiz\\Index.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Quiz\\Index.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Quiz\\Index.cshtml",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAwwNwAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-19T05:32:36.502Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "QuizController.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\QuizController.cs",
               "RelativeDocumentMoniker": "online_quiz\\Controllers\\QuizController.cs",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\QuizController.cs",
               "RelativeToolTip": "online_quiz\\Controllers\\QuizController.cs",
-              "ViewState": "AgIAAGACAAAAAAAAAAAswGgCAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAG0CAAAAAAAAAAAAAIMCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-19T05:26:53.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 0,
               "Title": "SubjectController.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\SubjectController.cs",
               "RelativeDocumentMoniker": "online_quiz\\Controllers\\SubjectController.cs",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Controllers\\SubjectController.cs",
               "RelativeToolTip": "online_quiz\\Controllers\\SubjectController.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAAwGwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAIwKsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-19T05:19:45.899Z"
+              "WhenOpened": "2026-09-19T05:19:45.899Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Subject\\Index.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Views\\Subject\\Index.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Views\\Subject\\Index.cshtml",
               "RelativeToolTip": "online_quiz\\Views\\Subject\\Index.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAwEYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAG4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-19T05:14:50.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-19T05:14:50.745Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 67,
               "Title": "SQLQuery3.sql",
               "DocumentMoniker": "C:\\Users\\patel\\AppData\\Local\\Temp\\SQLQuery3.sql",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\SQLQuery3.sql",
@@ -791,7 +1062,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 68,
               "Title": "SQLQuery2.sql",
               "DocumentMoniker": "C:\\Users\\patel\\AppData\\Local\\Temp\\SQLQuery2.sql",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\SQLQuery2.sql",
@@ -802,7 +1073,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 69,
               "Title": "SQLQuery1.sql",
               "DocumentMoniker": "C:\\Users\\patel\\AppData\\Local\\Temp\\SQLQuery1.sql",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\SQLQuery1.sql",
@@ -813,7 +1084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 70,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
@@ -825,7 +1096,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 71,
               "Title": "GlobalUsings.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\GlobalUsings.cs",
               "RelativeDocumentMoniker": "online_quiz\\GlobalUsings.cs",
@@ -837,7 +1108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 73,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "online_quiz\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -849,19 +1120,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 49,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "online_quiz\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeToolTip": "online_quiz\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAUwIQAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwM0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-18T19:33:48.055Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 74,
               "Title": "dbo.AspNetUsers.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/OnlineQuizDB/True/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/OnlineQuizDB/True/SqlTable/dbo.AspNetUsers.sql",
@@ -870,7 +1141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 66,
               "Title": "DbInitializer.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Data\\DbInitializer.cs",
               "RelativeDocumentMoniker": "online_quiz\\Data\\DbInitializer.cs",
@@ -882,7 +1153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 75,
               "Title": "20260918045121_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Migrations\\20260918045121_InitialCreate.cs",
               "RelativeDocumentMoniker": "online_quiz\\Migrations\\20260918045121_InitialCreate.cs",
@@ -894,7 +1165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 76,
               "Title": "20260918044851_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Migrations\\20260918044851_InitialCreate.cs",
               "RelativeDocumentMoniker": "online_quiz\\Migrations\\20260918044851_InitialCreate.cs",
@@ -906,7 +1177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 78,
               "Title": "20260918044122_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Migrations\\20260918044122_InitialCreate.cs",
               "RelativeDocumentMoniker": "online_quiz\\Migrations\\20260918044122_InitialCreate.cs",
@@ -918,7 +1189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 79,
               "Title": "Result.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\Result.cs",
               "RelativeDocumentMoniker": "online_quiz\\Models\\Result.cs",
@@ -930,7 +1201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 56,
               "Title": "StudentAnswer.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\StudentAnswer.cs",
               "RelativeDocumentMoniker": "online_quiz\\Models\\StudentAnswer.cs",
@@ -942,7 +1213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 80,
               "Title": "QuizAttempt.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\QuizAttempt.cs",
               "RelativeDocumentMoniker": "online_quiz\\Models\\QuizAttempt.cs",
@@ -954,7 +1225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 81,
               "Title": "Option.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\Option.cs",
               "RelativeDocumentMoniker": "online_quiz\\Models\\Option.cs",
@@ -966,7 +1237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 65,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\Question.cs",
               "RelativeDocumentMoniker": "online_quiz\\Models\\Question.cs",
@@ -978,7 +1249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 63,
               "Title": "Quiz.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\Quiz.cs",
               "RelativeDocumentMoniker": "online_quiz\\Models\\Quiz.cs",
@@ -990,19 +1261,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 25,
               "Title": "Subject.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\Subject.cs",
               "RelativeDocumentMoniker": "online_quiz\\Models\\Subject.cs",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\Subject.cs",
               "RelativeToolTip": "online_quiz\\Models\\Subject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-18T04:12:56.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 77,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\appsettings.json",
               "RelativeDocumentMoniker": "online_quiz\\appsettings.json",
@@ -1014,19 +1285,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 24,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "online_quiz\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "online_quiz\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAIwCwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwA8AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-18T03:34:06.776Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 60,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Program.cs",
               "RelativeDocumentMoniker": "online_quiz\\Program.cs",
@@ -1038,7 +1309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 82,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "online_quiz\\Models\\ErrorViewModel.cs",
@@ -1050,7 +1321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 72,
               "Title": "online_quiz.csproj",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\online_quiz.csproj",
               "RelativeDocumentMoniker": "online_quiz\\online_quiz.csproj",
@@ -1062,7 +1333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 62,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\patel\\source\\repos\\WAD_PROJECT\\online_quiz\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "online_quiz\\Models\\ApplicationUser.cs",

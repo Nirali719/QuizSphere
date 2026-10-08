@@ -1,0 +1,193 @@
+﻿@model online_quiz.Models.Category
+
+@{
+    ViewData["Title"] = "Category Subjects";
+}
+
+<div class="container py-4">
+
+    <!-- Page Header -->
+    <div class="d-flex justify-content-between align-items-start mb-5">
+
+        <div>
+            <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                Category Management
+            </p>
+
+            <h1 class="fw-semibold mb-2">
+                @Model.Name
+            </h1>
+
+            <p class="text-secondary mb-0">
+                @Model.Description
+            </p>
+        </div>
+
+        <div>
+            <a asp-controller="Subject"
+               asp-action="Create"
+               asp-route-categoryId="@Model.Id"
+               class="btn btn-dark px-4">
+                + Add Subject
+            </a>
+        </div>
+
+    </div>
+
+    @if (Model.Subjects == null || !Model.Subjects.Any())
+    {
+        <!-- Empty State -->
+        <div class="card border-0 shadow-sm rounded-3">
+
+            <div class="card-body p-4">
+
+                <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                    Subjects
+                </p>
+
+                <h5 class="fw-semibold mb-2">
+                    No Subjects Yet
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    Add a subject to this category to start organizing quizzes.
+                </p>
+
+            </div>
+
+        </div>
+    }
+    else
+    {
+        <!-- Subjects Table -->
+        <div class="card border-0 shadow-sm rounded-3">
+
+            <div class="card-body p-0">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle mb-0">
+
+                        <thead class="table-light">
+
+                            <tr>
+
+                                <th class="px-4 py-3">
+                                    Subject
+                                </th>
+
+                                <th class="py-3">
+                                    Description
+                                </th>
+
+                                <th class="py-3">
+                                    Status
+                                </th>
+
+                                <th class="py-3 text-end pe-4">
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var subject in Model.Subjects)
+                            {
+                                <tr>
+
+                                    <td class="px-4">
+
+                                        <div class="fw-semibold">
+                                            @subject.Name
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        <span class="text-secondary">
+                                            @subject.Description
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        @if (subject.IsActive)
+                                        {
+                                            <span class="badge bg-success">
+                                                Active
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">
+                                                Inactive
+                                            </span>
+                                        }
+
+                                    </td>
+
+                                    <td class="text-end pe-4">
+
+                                        <div class="d-flex justify-content-end gap-2">
+
+                                            @if (subject.IsActive)
+                                            {
+                                                <a asp-controller="Subject"
+                                                   asp-action="Edit"
+                                                   asp-route-id="@subject.Id"
+                                                   class="btn btn-sm btn-outline-dark">
+                                                    Edit
+                                                </a>
+
+                                                <a asp-controller="Subject"
+                                                   asp-action="Delete"
+                                                   asp-route-id="@subject.Id"
+                                                   class="btn btn-sm btn-outline-danger">
+                                                    Deactivate
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a asp-controller="Subject"
+                                                   asp-action="Activate"
+                                                   asp-route-id="@subject.Id"
+                                                   class="btn btn-sm btn-outline-dark">
+                                                    Activate
+                                                </a>
+                                            }
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+    }
+
+    <!-- Back -->
+    <div class="mt-5">
+
+        <a asp-controller="Category"
+           asp-action="Index"
+           class="btn btn-outline-dark px-4">
+            Back to Categories
+        </a>
+
+    </div>
+
+</div>

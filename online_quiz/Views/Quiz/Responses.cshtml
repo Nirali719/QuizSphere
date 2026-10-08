@@ -6,122 +6,209 @@
     var quiz = ViewBag.Quiz as online_quiz.Models.Quiz;
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Quiz Responses</h1>
+    <!-- Page Header -->
+    <div class="d-flex flex-column flex-md-row
+        justify-content-between align-items-md-center mb-5">
 
-    @if (quiz != null)
-    {
-        <p class="text-muted">
-            Quiz:
-            <strong>@quiz.Title</strong>
-            |
-            Subject:
-            <strong>@quiz.Subject?.Name</strong>
-        </p>
-    }
+        <div>
 
-    <hr />
+            <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                Reports
+            </p>
+
+            <h1 class="fw-semibold mb-2">
+                Quiz Responses
+            </h1>
+
+            @if (quiz != null)
+            {
+                <p class="text-secondary mb-0">
+                    Review participant performance for
+                    <span class="fw-semibold text-dark">
+                        @quiz.Title
+                    </span>
+                    <span class="mx-1">·</span>
+                    @quiz.Subject?.Name
+                </p>
+            }
+
+        </div>
+
+        <div class="mt-3 mt-md-0">
+
+            <a asp-controller="Quiz"
+               asp-action="Index"
+               class="btn btn-outline-dark px-4">
+                Back to My Quizzes
+            </a>
+
+        </div>
+
+    </div>
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info">
-            No participants have attempted this quiz yet.
+        <!-- Empty State -->
+        <div class="card border-0 shadow-sm rounded-3">
+
+            <div class="card-body text-center py-5">
+
+                <h5 class="fw-semibold mb-2">
+                    No Responses Yet
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    No participants have attempted this quiz yet.
+                </p>
+
+            </div>
+
         </div>
     }
     else
     {
-        <div class="table-responsive">
+        <!-- Responses Table -->
+        <div class="card border-0 shadow-sm rounded-3">
 
-            <table class="table table-bordered table-striped">
+            <div class="card-body p-0">
 
-                <thead>
-                    <tr>
-                        <th>Participant</th>
-                        <th>Email</th>
-                        <th>Score</th>
-                        <th>Total Marks</th>
-                        <th>Percentage</th>
-                        <th>Result</th>
-                        <th>Attempted On</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
+                <div class="table-responsive">
 
-                <tbody>
+                    <table class="table table-hover align-middle mb-0">
 
-                    @foreach (var result in Model)
-                    {
-                        <tr>
+                        <thead class="table-light">
 
-                            <td>
-                                @result.QuizAttempt?.Participant?.FullName
-                            </td>
+                            <tr>
 
-                            <td>
-                                @result.QuizAttempt?.Participant?.Email
-                            </td>
+                                <th class="px-4 py-3">
+                                    Participant
+                                </th>
 
-                            <td>
-                                @result.Score
-                            </td>
+                                <th class="py-3">
+                                    Email
+                                </th>
 
-                            <td>
-                                @result.TotalMarks
-                            </td>
+                                <th class="py-3">
+                                    Score
+                                </th>
 
-                            <td>
-                                @result.Percentage.ToString("0.00")%
-                            </td>
+                                <th class="py-3">
+                                    Percentage
+                                </th>
 
-                            <td>
+                                <th class="py-3">
+                                    Result
+                                </th>
 
-                                @if (result.IsPassed)
-                                {
-                                    <span class="badge bg-success">
-                                        PASS
-                                    </span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-danger">
-                                        FAIL
-                                    </span>
-                                }
+                                <th class="py-3">
+                                    Attempted On
+                                </th>
 
-                            </td>
+                                <th class="px-4 py-3">
+                                    Details
+                                </th>
 
-                            <td>
-                                @result.QuizAttempt?.EndTime?.ToString("dd-MM-yyyy HH:mm")
-                            </td>
+                            </tr>
 
-                            <td>
-                                <a asp-controller="Quiz"
-                                   asp-action="ResponseDetails"
-                                   asp-route-id="@result.Id"
-                                   class="btn btn-sm btn-primary">
-                                    View Details
-                                </a>
-                            </td>
+                        </thead>
 
-                        </tr>
-                    }
+                        <tbody>
 
-                </tbody>
+                            @foreach (var result in Model)
+                            {
+                                <tr>
 
-            </table>
+                                    <!-- Participant -->
+                                    <td class="px-4">
+
+                                        <div class="fw-semibold">
+                                            @result.QuizAttempt?.Participant?.FullName
+                                        </div>
+
+                                    </td>
+
+                                    <!-- Email -->
+                                    <td>
+
+                                        <span class="text-secondary">
+                                            @result.QuizAttempt?.Participant?.Email
+                                        </span>
+
+                                    </td>
+
+                                    <!-- Score -->
+                                    <td>
+
+                                        <span class="fw-semibold">
+                                            @result.Score
+                                        </span>
+
+                                        <span class="text-secondary">
+                                            / @result.TotalMarks
+                                        </span>
+
+                                    </td>
+
+                                    <!-- Percentage -->
+                                    <td>
+
+                                        @result.Percentage.ToString("0.00")%
+
+                                    </td>
+
+                                    <!-- Result -->
+                                    <td>
+
+                                        @if (result.IsPassed)
+                                        {
+                                            <span class="badge bg-success">
+                                                PASS
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">
+                                                FAIL
+                                            </span>
+                                        }
+
+                                    </td>
+
+                                    <!-- Attempted On -->
+                                    <td>
+
+                                        <span class="text-secondary">
+                                            @result.QuizAttempt?.EndTime?.ToString("dd-MM-yyyy HH:mm")
+                                        </span>
+
+                                    </td>
+
+                                    <!-- Details -->
+                                    <td class="px-4">
+
+                                        <a asp-controller="Quiz"
+                                           asp-action="ResponseDetails"
+                                           asp-route-id="@result.Id"
+                                           class="btn btn-sm btn-outline-dark">
+                                            View Details
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
 
         </div>
     }
-
-    <div class="mt-4">
-
-        <a asp-controller="Quiz"
-           asp-action="Index"
-           class="btn btn-secondary">
-            Back to My Quizzes
-        </a>
-
-    </div>
 
 </div>

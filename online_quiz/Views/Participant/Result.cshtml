@@ -7,137 +7,227 @@
         as List<online_quiz.Models.StudentAnswer>;
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Quiz Result</h1>
+    <!-- Page Header -->
+    <div class="mb-5">
 
-    <hr />
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Assessment Result
+        </p>
+
+        <h1 class="fw-semibold mb-2">
+            Quiz Result
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Review your performance and answer details.
+        </p>
+
+    </div>
+
+    <!-- Time Expired -->
     @if (TempData["TimeExpired"] != null)
     {
-        <div class="alert alert-warning">
-            <strong>Time's Up!</strong>
-            <br />
-            @TempData["TimeExpired"]
+        <div class="alert alert-warning border-0 shadow-sm rounded-3 mb-4">
+
+            <div class="fw-semibold mb-1">
+                Time's Up!
+            </div>
+
+            <div>
+                @TempData["TimeExpired"]
+            </div>
+
         </div>
     }
-    <div class="card mb-4">
-        <div class="card-body">
 
-            <h3>
+    <!-- Quiz Information -->
+    <div class="card border-0 shadow-sm rounded-3 mb-4">
+
+        <div class="card-body p-4">
+
+            <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                Quiz
+            </p>
+
+            <h3 class="fw-semibold mb-2">
                 @Model.QuizAttempt?.Quiz?.Title
             </h3>
 
-            <p class="text-muted">
+            <p class="text-secondary mb-0">
                 Subject:
-                <strong>
-                    @Model.QuizAttempt?.Quiz?.Subject?.Name
-                </strong>
+                <strong>@Model.QuizAttempt?.Quiz?.Subject?.Name</strong>
             </p>
 
         </div>
-    </div>
-
-    <div class="row">
-
-        <div class="col-md-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-
-                    <h5>Total Questions</h5>
-
-                    <h3>
-                        @Model.TotalQuestions
-                    </h3>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-
-                    <h5>Correct Answers</h5>
-
-                    <h3>
-                        @Model.CorrectAnswers
-                    </h3>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-
-                    <h5>Incorrect Answers</h5>
-
-                    <h3>
-                        @Model.IncorrectAnswers
-                    </h3>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-
-                    <h5>Unattempted</h5>
-
-                    <h3>
-                        @Model.Unattempted
-                    </h3>
-
-                </div>
-            </div>
-        </div>
 
     </div>
 
-    <div class="card mt-3">
-        <div class="card-body text-center">
+    <!-- Answer Summary -->
+    <div class="mb-4">
 
-            <h4>Your Score</h4>
+        <p class="text-secondary text-uppercase fw-semibold small mb-3">
+            Answer Summary
+        </p>
 
-            <h1>
+        <div class="row g-3">
+
+            <!-- Total Questions -->
+            <div class="col-6 col-lg-3">
+
+                <div class="card border-0 shadow-sm rounded-3 h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="text-secondary small mb-2">
+                            Total Questions
+                        </div>
+
+                        <div class="fs-3 fw-semibold">
+                            @Model.TotalQuestions
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Correct -->
+            <div class="col-6 col-lg-3">
+
+                <div class="card border-0 shadow-sm rounded-3 h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="text-secondary small mb-2">
+                            Correct Answers
+                        </div>
+
+                        <div class="fs-3 fw-semibold">
+                            @Model.CorrectAnswers
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Incorrect -->
+            <div class="col-6 col-lg-3">
+
+                <div class="card border-0 shadow-sm rounded-3 h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="text-secondary small mb-2">
+                            Incorrect Answers
+                        </div>
+
+                        <div class="fs-3 fw-semibold">
+                            @Model.IncorrectAnswers
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Unattempted -->
+            <div class="col-6 col-lg-3">
+
+                <div class="card border-0 shadow-sm rounded-3 h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="text-secondary small mb-2">
+                            Unattempted
+                        </div>
+
+                        <div class="fs-3 fw-semibold">
+                            @Model.Unattempted
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Score -->
+    <div class="card border-0 shadow-sm rounded-3 mb-5">
+
+        <div class="card-body p-4 p-lg-5 text-center">
+
+            <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                Final Score
+            </p>
+
+            <h2 class="fw-semibold mb-2">
                 @Model.Score / @Model.TotalMarks
-            </h1>
+            </h2>
 
-            <h4>
+            <p class="text-secondary mb-4">
                 Percentage:
-                @Model.Percentage.ToString("0.00")%
-            </h4>
+                <strong>@Model.Percentage.ToString("0.00")%</strong>
+            </p>
 
             @if (Model.IsPassed)
             {
-                <div class="alert alert-success mt-3">
-                    <strong>PASS</strong>
-                    <br />
-                    Congratulations! You have passed the quiz.
+                <div class="border border-success rounded-3 p-3">
+
+                    <div class="fw-semibold text-success mb-1">
+                        PASS
+                    </div>
+
+                    <div class="text-secondary">
+                        Congratulations! You have passed the quiz.
+                    </div>
+
                 </div>
             }
             else
             {
-                <div class="alert alert-danger mt-3">
-                    <strong>FAIL</strong>
-                    <br />
-                    You did not reach the passing marks.
+                <div class="border border-danger rounded-3 p-3">
+
+                    <div class="fw-semibold text-danger mb-1">
+                        FAIL
+                    </div>
+
+                    <div class="text-secondary">
+                        You did not reach the passing marks.
+                    </div>
+
                 </div>
             }
 
         </div>
+
     </div>
 
-    <hr class="mt-5" />
+    <!-- Answer Review -->
+    <div class="mb-4">
 
-    <h2>Answer Review</h2>
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Answer Review
+        </p>
 
-    <p class="text-muted">
-        Review your answers and see the correct answers.
-    </p>
+        <h2 class="fw-semibold mb-2">
+            Review Your Answers
+        </h2>
+
+        <p class="text-secondary mb-4">
+            Review your answers and see the correct answers.
+        </p>
+
+    </div>
 
     @if (answers != null && answers.Any())
     {
@@ -148,70 +238,100 @@
             var correctOption = answer.Question?.Options?
                 .FirstOrDefault(o => o.IsCorrect);
 
-            <div class="card mb-4">
+            <div class="card border-0 shadow-sm rounded-3 mb-4">
 
-                <div class="card-body">
+                <div class="card-body p-4">
 
-                    <h5>
-                        Question @questionNumber
-                    </h5>
+                    <!-- Question Header -->
+                    <div class="d-flex justify-content-between align-items-start mb-3">
 
-                    <p>
-                        <strong>
-                            @answer.Question?.QuestionText
-                        </strong>
-                    </p>
+                        <div>
 
-                    <p>
-                        <strong>Your Answer:</strong>
+                            <p class="text-secondary text-uppercase fw-semibold small mb-1">
+                                Question @questionNumber
+                            </p>
+
+                            <h5 class="fw-semibold mb-0">
+                                @answer.Question?.QuestionText
+                            </h5>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Your Answer -->
+                    <div class="border rounded-3 p-3 mb-3">
+
+                        <div class="text-secondary small mb-1">
+                            Your Answer
+                        </div>
 
                         @if (answer.SelectedOption != null)
                         {
-                            <span>
+                            <div class="fw-semibold">
                                 @answer.SelectedOption.OptionText
-                            </span>
+                            </div>
                         }
                         else
                         {
-                            <span class="text-muted">
+                            <div class="text-secondary">
                                 Not Attempted
-                            </span>
+                            </div>
                         }
-                    </p>
 
-                    <p>
-                        <strong>Correct Answer:</strong>
+                    </div>
+
+                    <!-- Correct Answer -->
+                    <div class="border rounded-3 p-3 mb-3">
+
+                        <div class="text-secondary small mb-1">
+                            Correct Answer
+                        </div>
 
                         @if (correctOption != null)
                         {
-                            <span>
+                            <div class="fw-semibold">
                                 @correctOption.OptionText
-                            </span>
+                            </div>
                         }
                         else
                         {
-                            <span class="text-danger">
+                            <div class="text-danger">
                                 Not available
-                            </span>
+                            </div>
                         }
-                    </p>
 
+                    </div>
+
+                    <!-- Answer Status -->
                     @if (answer.SelectedOptionId == null)
                     {
-                        <div class="alert alert-warning">
-                            Unattempted
+                        <div class="border border-warning rounded-3 p-3">
+
+                            <div class="fw-semibold">
+                                Unattempted
+                            </div>
+
                         </div>
                     }
                     else if (answer.SelectedOption?.IsCorrect == true)
                     {
-                        <div class="alert alert-success">
-                            Correct Answer
+                        <div class="border border-success rounded-3 p-3">
+
+                            <div class="fw-semibold text-success">
+                                Correct Answer
+                            </div>
+
                         </div>
                     }
                     else
                     {
-                        <div class="alert alert-danger">
-                            Incorrect Answer
+                        <div class="border border-danger rounded-3 p-3">
+
+                            <div class="fw-semibold text-danger">
+                                Incorrect Answer
+                            </div>
+
                         </div>
                     }
 
@@ -224,18 +344,31 @@
     }
     else
     {
-        <div class="alert alert-info">
-            No answer details are available.
+        <div class="card border-0 shadow-sm rounded-3">
+
+            <div class="card-body p-4">
+
+                <h5 class="fw-semibold mb-2">
+                    No Answer Details
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    No answer details are available.
+                </p>
+
+            </div>
+
         </div>
     }
 
-    <div class="mt-4 mb-4">
+    <!-- Navigation -->
+    <div class="mt-5 mb-4">
 
         <a asp-controller="Participant"
-           asp-action="Subjects"
-           class="btn btn-primary">
-            Back to Available Quizzes
-        </a>
+   asp-action="Categories"
+   class="btn btn-outline-dark px-4">
+    Back to Categories
+</a>
 
     </div>
 

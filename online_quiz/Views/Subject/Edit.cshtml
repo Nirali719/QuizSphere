@@ -4,84 +4,148 @@
     ViewData["Title"] = "Edit Subject";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Edit Subject</h1>
+    <!-- Page Header -->
 
-    <hr />
+    <div class="mb-5">
+
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Content Management
+        </p>
+
+        <h1 class="fw-semibold mb-2">
+            Edit Subject
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Update the subject details and manage its active status.
+        </p>
+
+    </div>
+
+
+    <!-- Form Card -->
 
     <div class="row">
 
-        <div class="col-md-6">
+        <div class="col-md-8 col-lg-7">
 
-            <form asp-action="Edit" method="post">
+            <div class="card border-0 shadow-sm">
 
-                <input type="hidden" asp-for="Id" />
+                <div class="card-body p-4 p-lg-5">
 
-                <div asp-validation-summary="ModelOnly"
-                     class="text-danger">
+                    <form asp-action="Edit" method="post">
+
+                        <input type="hidden" asp-for="Id" />
+
+                        <!-- Category -->
+
+                        <div class="mb-4">
+
+                            <label class="form-label fw-semibold">
+                                Category
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   value="@Model.Category?.Name"
+                                   readonly />
+
+                        </div>
+
+                        <!-- Validation -->
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="text-danger mb-4">
+                        </div>
+
+
+                        <!-- Subject Name -->
+
+                        <div class="mb-4">
+
+                            <label asp-for="Name"
+                                   class="form-label fw-semibold">
+
+                                Subject Name
+
+                            </label>
+
+                            <input asp-for="Name"
+                                   class="form-control" />
+
+                            <span asp-validation-for="Name"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Description -->
+
+                        <div class="mb-4">
+
+                            <label asp-for="Description"
+                                   class="form-label fw-semibold">
+
+                                Description
+
+                            </label>
+
+                            <textarea asp-for="Description"
+                                      class="form-control"
+                                      rows="5"></textarea>
+
+                            <span asp-validation-for="Description"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Active Status -->
+
+                        <div class="form-check mb-4">
+
+                            <input asp-for="IsActive"
+                                   class="form-check-input" />
+
+                            <label asp-for="IsActive"
+                                   class="form-check-label">
+
+                                Active
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Buttons -->
+
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <button type="submit"
+                                    class="btn btn-dark px-4">
+
+                                Save Changes
+
+                            </button>
+
+                            <a asp-action="Index"
+                               class="btn btn-outline-dark px-4">
+
+                                Back to Subjects
+
+                            </a>
+
+                        </div>
+
+                    </form>
+
                 </div>
 
-                <!-- Subject Name -->
-                <div class="mb-3">
-
-                    <label asp-for="Name"
-                           class="form-label">
-                        Subject Name
-                    </label>
-
-                    <input asp-for="Name"
-                           class="form-control" />
-
-                    <span asp-validation-for="Name"
-                          class="text-danger">
-                    </span>
-
-                </div>
-
-                <!-- Description -->
-                <div class="mb-3">
-
-                    <label asp-for="Description"
-                           class="form-label">
-                        Description
-                    </label>
-
-                    <textarea asp-for="Description"
-                              class="form-control"
-                              rows="4">
-                    </textarea>
-
-                    <span asp-validation-for="Description"
-                          class="text-danger">
-                    </span>
-
-                </div>
-
-                <!-- Active Status -->
-                <div class="form-check mb-3">
-
-                    <input asp-for="IsActive"
-                           class="form-check-input" />
-
-                    <label asp-for="IsActive"
-                           class="form-check-label">
-                        Active
-                    </label>
-
-                </div>
-
-                <button type="submit"
-                        class="btn btn-primary">
-                    Save Changes
-                </button>
-
-                <a asp-action="Index"
-                   class="btn btn-secondary">
-                    Back to Subjects
-                </a>
-
-            </form>
+            </div>
 
         </div>
 
@@ -89,6 +153,9 @@
 
 </div>
 
+
 @section Scripts {
+
     <partial name="_ValidationScriptsPartial" />
+
 }

@@ -1,0 +1,112 @@
+﻿@model IEnumerable<online_quiz.Models.Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<div class="container py-4">
+
+    <!-- Page Header -->
+
+    <div class="mb-5">
+
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Participant Panel
+        </p>
+
+        <h1 class="fw-semibold mb-2">
+            Categories
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Select a category to view the subjects and quizzes available to you.
+        </p>
+
+    </div>
+
+
+    @if (!Model.Any())
+    {
+        <!-- Empty State -->
+
+        <div class="card border-0 shadow-sm rounded-3">
+
+            <div class="card-body p-4">
+
+                <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                    Categories
+                </p>
+
+                <h5 class="fw-semibold mb-2">
+                    No Categories Available
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    There are currently no active categories available.
+                </p>
+
+            </div>
+
+        </div>
+    }
+    else
+    {
+        <!-- Category Cards -->
+
+        <div class="row g-4">
+
+            @foreach (var category in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card border-0 shadow-sm rounded-3 h-100">
+
+                        <div class="card-body p-4 d-flex flex-column">
+
+                            <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                                Category
+                            </p>
+
+                            <h5 class="fw-semibold mb-3">
+                                @category.Name
+                            </h5>
+
+                            <p class="text-secondary mb-4">
+                                @category.Description
+                            </p>
+
+                            <div class="mt-auto">
+
+                                <a asp-controller="Participant"
+                                   asp-action="Subjects"
+                                   asp-route-categoryId="@category.Id"
+                                   class="btn btn-dark px-4">
+                                    View Subjects
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+        </div>
+    }
+
+
+    <!-- Back -->
+
+    <div class="mt-5">
+
+        <a asp-controller="Participant"
+           asp-action="Index"
+           class="btn btn-outline-dark px-4">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</div>

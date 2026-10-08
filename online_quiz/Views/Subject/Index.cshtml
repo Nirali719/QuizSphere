@@ -4,89 +4,198 @@
     ViewData["Title"] = "Subjects";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1>Subjects</h1>
+    <!-- Page Header -->
 
-        <a asp-action="Create" class="btn btn-primary">
-            Create Subject
-        </a>
+    <div class="d-flex flex-column flex-md-row justify-content-between
+                align-items-md-center mb-5">
+
+        <div>
+
+            <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                Content Management
+            </p>
+
+            <h1 class="fw-semibold mb-2">
+                Subjects
+            </h1>
+
+            <p class="text-secondary mb-0">
+                Create and manage the subjects available in the quiz portal.
+            </p>
+
+        </div>
+
+        
+
     </div>
 
-    <hr />
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info">
-            No subjects have been created yet.
+        <!-- Empty State -->
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body text-center py-5">
+
+                <h5 class="fw-semibold mb-2">
+                    No Subjects Available
+                </h5>
+
+                <p class="text-secondary mb-4">
+                    No subjects have been created yet.
+                </p>
+
+                <a asp-action="Create"
+                   class="btn btn-dark px-4">
+
+                    Create Your First Subject
+
+                </a>
+
+            </div>
+
         </div>
     }
     else
     {
-        <table class="table table-bordered table-striped">
+        <!-- Subjects Table -->
 
-            <thead>
-                <tr>
-                    <th>Subject Name</th>
-                    <th>Description</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
+        <div class="card border-0 shadow-sm">
 
-            <tbody>
-                @foreach (var subject in Model)
-                {
-                    <tr>
-                        <td>@subject.Name</td>
+            <div class="card-body p-0">
 
-                        <td>@subject.Description</td>
+                <div class="table-responsive">
 
-                        <td>
-                            @if (subject.IsActive)
+                    <table class="table table-hover align-middle mb-0">
+
+                        <thead class="table-light">
+
+                            <tr>
+
+                            <th class="px-4 py-3">
+                                Subject Name
+                            </th>
+
+                            <th class="py-3">
+                                Category
+                            </th>
+
+                            <th class="py-3">
+                                Description
+                            </th>
+
+                                <th class="py-3">
+                                    Status
+                                </th>
+
+                                <th class="py-3 pe-4">
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            @foreach (var subject in Model)
                             {
-                                <span class="badge bg-success">
-                                    Active
-                                </span>
-                            }
-                            else
-                            {
-                                <span class="badge bg-danger">
-                                    Inactive
-                                </span>
-                            }
-                        </td>
+                                <tr>
 
-                        <td>
-                            @if (subject.IsActive)
-                            {
-                                <a asp-action="Edit"
-                                   asp-route-id="@subject.Id"
-                                   class="btn btn-sm btn-warning">
-                                    Edit
-                                </a>
+                                    <td class="px-4 py-3">
 
-                                <a asp-action="Delete"
-                                   asp-route-id="@subject.Id"
-                                   class="btn btn-sm btn-danger">
-                                    Deactivate
-                                </a>
-                            }
-                            else
-                            {
-                                <a asp-action="Activate"
-                                   asp-route-id="@subject.Id"
-                                   class="btn btn-sm btn-success">
-                                    Activate
-                                </a>
-                            }
-                        </td>
-                    </tr>
-                }
-            </tbody>
+                                        <span class="fw-semibold">
+                                            @subject.Name
+                                        </span>
 
-        </table>
+                                    </td>
+
+                                    <td class="py-3">
+                                        <span class="text-secondary">
+                                            @subject.Category?.Name
+                                        </span>
+                                    </td>
+
+                                    <td class="py-3">
+
+                                        <span class="text-secondary">
+                                            @subject.Description
+                                        </span>
+
+                                    </td>
+
+
+                                    <td class="py-3">
+
+                                        @if (subject.IsActive)
+                                        {
+                                            <span class="badge bg-success">
+                                                Active
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">
+                                                Inactive
+                                            </span>
+                                        }
+
+                                    </td>
+
+
+                                    <td class="py-3 pe-4">
+
+                                        <div class="d-flex flex-wrap gap-2">
+
+                                            @if (subject.IsActive)
+                                            {
+                                                <a asp-action="Edit"
+                                                   asp-route-id="@subject.Id"
+                                                   class="btn btn-sm btn-outline-dark">
+
+                                                    Edit
+
+                                                </a>
+
+                                                <a asp-action="Delete"
+                                                   asp-route-id="@subject.Id"
+                                                   class="btn btn-sm btn-outline-danger">
+
+                                                    Deactivate
+
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a asp-action="Activate"
+                                                   asp-route-id="@subject.Id"
+                                                   class="btn btn-sm btn-outline-success">
+
+                                                    Activate
+
+                                                </a>
+                                            }
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
     }
 
 </div>

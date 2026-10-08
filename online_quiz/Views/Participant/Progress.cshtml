@@ -4,76 +4,133 @@
     ViewData["Title"] = "My Progress";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>My Progress</h1>
+    <!-- Page Header -->
+    <div class="mb-5">
 
-    <p class="text-muted">
-        View your subject-wise quiz performance.
-    </p>
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Performance Analytics
+        </p>
 
-    <hr />
+        <h1 class="fw-semibold mb-2">
+            My Progress
+        </h1>
+
+        <p class="text-secondary mb-0">
+            View your subject-wise quiz performance and progress.
+        </p>
+
+    </div>
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info">
-            You have not attempted any quizzes yet.
+        <!-- Empty State -->
+        <div class="card border-0 shadow-sm rounded-3">
+
+            <div class="card-body p-4">
+
+                <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                    Progress
+                </p>
+
+                <h5 class="fw-semibold mb-2">
+                    No Progress Available
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    You have not attempted any quizzes yet.
+                </p>
+
+            </div>
+
         </div>
     }
     else
     {
-        <div class="table-responsive">
+        <!-- Progress Table -->
+        <div class="card border-0 shadow-sm rounded-3">
 
-            <table class="table table-bordered table-striped">
+            <div class="card-body p-0">
 
-                <thead>
-                    <tr>
-                        <th>Subject</th>
-                        <th>Quizzes Attempted</th>
-                        <th>Average Score</th>
-                        <th>Average Percentage</th>
-                    </tr>
-                </thead>
+                <div class="table-responsive">
 
-                <tbody>
+                    <table class="table table-hover align-middle mb-0">
 
-                    @foreach (var item in Model)
-                    {
-                        <tr>
+                        <thead class="table-light">
 
-                            <td>
-                                <strong>
-                                    @item.SubjectName
-                                </strong>
-                            </td>
+                            <tr>
 
-                            <td>
-                                @item.QuizzesAttempted
-                            </td>
+                                <th class="px-4 py-3">
+                                    Subject
+                                </th>
 
-                            <td>
-                                @item.AverageScore.ToString("0.00")
-                            </td>
+                                <th class="py-3">
+                                    Quizzes Attempted
+                                </th>
 
-                            <td>
-                                @item.AveragePercentage.ToString("0.00")%
-                            </td>
+                                <th class="py-3">
+                                    Average Score
+                                </th>
 
-                        </tr>
-                    }
+                                <th class="py-3">
+                                    Average Percentage
+                                </th>
 
-                </tbody>
+                            </tr>
 
-            </table>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td class="px-4">
+
+                                        <div class="fw-semibold">
+                                            @item.SubjectName
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        @item.QuizzesAttempted
+                                    </td>
+
+                                    <td>
+                                        <span class="fw-semibold">
+                                            @item.AverageScore.ToString("0.00")
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="fw-semibold">
+                                            @item.AveragePercentage.ToString("0.00")%
+                                        </span>
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
 
         </div>
     }
 
-    <div class="mt-4">
+    <!-- Back to Dashboard -->
+    <div class="mt-5">
 
         <a asp-controller="Participant"
            asp-action="Index"
-           class="btn btn-secondary">
+           class="btn btn-outline-dark px-4">
             Back to Dashboard
         </a>
 

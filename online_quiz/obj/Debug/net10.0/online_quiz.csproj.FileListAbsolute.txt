@@ -21,7 +21,6 @@ C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\obj\Debug\net10.0\rjsmcshtml
 C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\obj\Debug\net10.0\scopedcss\bundle\online_quiz.styles.css
 C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\obj\Debug\net10.0\scopedcss\projectbundle\online_quiz.bundle.scp.css
-C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\obj\Debug\net10.0\compressed\0jbu1ejc4u-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\obj\Debug\net10.0\compressed\3wcxf0imra-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\obj\Debug\net10.0\compressed\p1w38r1q0c-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\obj\Debug\net10.0\compressed\6bzno78as6-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -295,3 +294,5 @@ C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\bin\Debug\net10.0\ru\Microso
 C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\obj\Debug\net10.0\online_quiz.sourcelink.json
+C:\Users\patel\source\repos\WAD_PROJECT\online_quiz\obj\Debug\net10.0\compressed\0jbu1ejc4u-{0}-x8fsdx2xb4-x8fsdx2xb4.gz

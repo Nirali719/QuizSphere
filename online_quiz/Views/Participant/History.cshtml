@@ -4,103 +4,178 @@
     ViewData["Title"] = "Attempt History";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Attempt History</h1>
+    <!-- Page Header -->
+    <div class="mb-5">
 
-    <p class="text-muted">
-        Here you can see the quizzes you have attempted and your results.
-    </p>
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Performance
+        </p>
 
-    <hr />
+        <h1 class="fw-semibold mb-2">
+            My Results
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Review the quizzes you have attempted and your results.
+        </p>
+
+    </div>
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info">
-            You have not attempted any quizzes yet.
+        <!-- Empty State -->
+        <div class="card border-0 shadow-sm rounded-3">
+
+            <div class="card-body p-4">
+
+                <p class="text-secondary text-uppercase fw-semibold small mb-2">
+                    Attempt History
+                </p>
+
+                <h5 class="fw-semibold mb-2">
+                    No Attempts Yet
+                </h5>
+
+                <p class="text-secondary mb-0">
+                    You have not attempted any quizzes yet.
+                </p>
+
+            </div>
+
         </div>
     }
     else
     {
-        <table class="table table-bordered table-striped">
+        <!-- Results Table -->
+        <div class="card border-0 shadow-sm rounded-3">
 
-            <thead>
-                <tr>
-                    <th>Quiz</th>
-                    <th>Subject</th>
-                    <th>Score</th>
-                    <th>Total Marks</th>
-                    <th>Percentage</th>
-                    <th>Result</th>
-                    <th>Attempted On</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
+            <div class="card-body p-0">
 
-            <tbody>
+                <div class="table-responsive">
 
-                @foreach (var result in Model)
-                {
-                    <tr>
+                    <table class="table table-hover align-middle mb-0">
 
-                        <td>
-                            @result.QuizAttempt?.Quiz?.Title
-                        </td>
+                        <thead class="table-light">
 
-                        <td>
-                            @result.QuizAttempt?.Quiz?.Subject?.Name
-                        </td>
+                            <tr>
+                                <th class="px-4 py-3">
+                                    Quiz
+                                </th>
 
-                        <td>
-                            @result.Score
-                        </td>
+                                <th class="py-3">
+                                    Subject
+                                </th>
 
-                        <td>
-                            @result.TotalMarks
-                        </td>
+                                <th class="py-3">
+                                    Score
+                                </th>
 
-                        <td>
-                            @result.Percentage.ToString("0.00")%
-                        </td>
+                                <th class="py-3">
+                                    Percentage
+                                </th>
 
-                        <td>
+                                <th class="py-3">
+                                    Result
+                                </th>
 
-                            @if (result.IsPassed)
+                                <th class="py-3">
+                                    Attempted On
+                                </th>
+
+                                <th class="py-3 text-end pe-4">
+                                    Action
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var result in Model)
                             {
-                                <span class="badge bg-success">
-                                    PASS
-                                </span>
+                                <tr>
+
+                                    <td class="px-4">
+                                        <div class="fw-semibold">
+                                            @result.QuizAttempt?.Quiz?.Title
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="text-secondary">
+                                            @result.QuizAttempt?.Quiz?.Subject?.Name
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="fw-semibold">
+                                            @result.Score / @result.TotalMarks
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        @result.Percentage.ToString("0.00")%
+                                    </td>
+
+                                    <td>
+
+                                        @if (result.IsPassed)
+                                        {
+                                            <span class="badge bg-success">
+                                                PASS
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">
+                                                FAIL
+                                            </span>
+                                        }
+
+                                    </td>
+
+                                    <td>
+                                        <span class="text-secondary">
+                                            @result.QuizAttempt?.EndTime?.ToString("dd-MM-yyyy HH:mm")
+                                        </span>
+                                    </td>
+
+                                    <td class="text-end pe-4">
+
+                                        <a asp-controller="Participant"
+                                           asp-action="Result"
+                                           asp-route-id="@result.Id"
+                                           class="btn btn-sm btn-outline-dark">
+                                            View Result
+                                        </a>
+
+                                    </td>
+
+                                </tr>
                             }
-                            else
-                            {
-                                <span class="badge bg-danger">
-                                    FAIL
-                                </span>
-                            }
 
-                        </td>
+                        </tbody>
 
-                        <td>
-                            @result.QuizAttempt?.EndTime?.ToString("dd-MM-yyyy HH:mm")
-                        </td>
+                    </table>
 
-                        <td>
+                </div>
 
-                            <a asp-controller="Participant"
-                               asp-action="Result"
-                               asp-route-id="@result.Id"
-                               class="btn btn-sm btn-primary">
-                                View Result
-                            </a>
+            </div>
 
-                        </td>
-
-                    </tr>
-                }
-
-            </tbody>
-
-        </table>
+        </div>
     }
+
+    <!-- Back to Dashboard -->
+    <div class="mt-5">
+
+        <a asp-controller="Participant"
+           asp-action="Index"
+           class="btn btn-outline-dark px-4">
+            Back to Dashboard
+        </a>
+
+    </div>
 
 </div>

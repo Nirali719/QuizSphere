@@ -71,6 +71,8 @@ namespace online_quiz.Controllers
             {
                 return NotFound();
             }
+
+            // Pending quizzes cannot be modified
             if (quiz.Status == "PENDING")
             {
                 TempData["Error"] =
@@ -81,15 +83,6 @@ namespace online_quiz.Controllers
                     new { quizId = quiz.Id });
             }
 
-            if (quiz.Status == "APPROVED")
-            {
-                TempData["Error"] =
-                    "Questions cannot be added to an approved quiz.";
-
-                return RedirectToAction(
-                    nameof(Index),
-                    new { quizId = quiz.Id });
-            }
             ViewBag.Quiz = quiz;
 
             return View();
@@ -116,6 +109,8 @@ namespace online_quiz.Controllers
             {
                 return NotFound();
             }
+
+            // Pending quizzes cannot be modified
             if (quiz.Status == "PENDING")
             {
                 TempData["Error"] =
@@ -126,15 +121,6 @@ namespace online_quiz.Controllers
                     new { quizId = quiz.Id });
             }
 
-            if (quiz.Status == "APPROVED")
-            {
-                TempData["Error"] =
-                    "Questions cannot be added to an approved quiz.";
-
-                return RedirectToAction(
-                    nameof(Index),
-                    new { quizId = quiz.Id });
-            }
             ModelState.Remove(nameof(Question.Quiz));
 
             if (!ModelState.IsValid)
@@ -147,6 +133,13 @@ namespace online_quiz.Controllers
             question.QuizId = quiz.Id;
 
             _context.Questions.Add(question);
+
+            // If an approved quiz is modified,
+            // it must go through Admin approval again.
+            if (quiz.Status == "APPROVED")
+            {
+                quiz.Status = "PENDING";
+            }
 
             await _context.SaveChangesAsync();
 
@@ -180,6 +173,8 @@ namespace online_quiz.Controllers
             {
                 return NotFound();
             }
+
+            // Pending quizzes cannot be modified
             if (question.Quiz.Status == "PENDING")
             {
                 TempData["Error"] =
@@ -190,17 +185,9 @@ namespace online_quiz.Controllers
                     new { quizId = question.QuizId });
             }
 
-            if (question.Quiz.Status == "APPROVED")
-            {
-                TempData["Error"] =
-                    "Questions cannot be edited in an approved quiz.";
-
-                return RedirectToAction(
-                    nameof(Index),
-                    new { quizId = question.QuizId });
-            }
             return View(question);
         }
+
         // POST: Question/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -229,20 +216,11 @@ namespace online_quiz.Controllers
                 return NotFound();
             }
 
+            // Pending quizzes cannot be modified
             if (existingQuestion.Quiz.Status == "PENDING")
             {
                 TempData["Error"] =
                     "Questions cannot be edited while the quiz is pending Admin approval.";
-
-                return RedirectToAction(
-                    nameof(Index),
-                    new { quizId = existingQuestion.QuizId });
-            }
-
-            if (existingQuestion.Quiz.Status == "APPROVED")
-            {
-                TempData["Error"] =
-                    "Questions cannot be edited in an approved quiz.";
 
                 return RedirectToAction(
                     nameof(Index),
@@ -273,12 +251,20 @@ namespace online_quiz.Controllers
             existingQuestion.QuestionText = question.QuestionText;
             existingQuestion.Marks = question.Marks;
 
+            // If an approved quiz is modified,
+            // it must go through Admin approval again.
+            if (existingQuestion.Quiz.Status == "APPROVED")
+            {
+                existingQuestion.Quiz.Status = "PENDING";
+            }
+
             await _context.SaveChangesAsync();
 
             return RedirectToAction(
                 nameof(Index),
                 new { quizId = existingQuestion.QuizId });
         }
+
         // GET: Question/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -307,6 +293,7 @@ namespace online_quiz.Controllers
 
             return View(question);
         }
+
         // POST: Question/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -329,20 +316,12 @@ namespace online_quiz.Controllers
             {
                 return NotFound();
             }
+
+            // Pending quizzes cannot be modified
             if (question.Quiz.Status == "PENDING")
             {
                 TempData["Error"] =
                     "Questions cannot be deleted while the quiz is pending Admin approval.";
-
-                return RedirectToAction(
-                    nameof(Index),
-                    new { quizId = question.QuizId });
-            }
-
-            if (question.Quiz.Status == "APPROVED")
-            {
-                TempData["Error"] =
-                    "Questions cannot be deleted from an approved quiz.";
 
                 return RedirectToAction(
                     nameof(Index),
@@ -356,6 +335,13 @@ namespace online_quiz.Controllers
             if (options.Any())
             {
                 _context.Options.RemoveRange(options);
+            }
+
+            // If an approved quiz is modified,
+            // it must go through Admin approval again.
+            if (question.Quiz.Status == "APPROVED")
+            {
+                question.Quiz.Status = "PENDING";
             }
 
             _context.Questions.Remove(question);

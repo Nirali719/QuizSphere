@@ -1,8 +1,179 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+
+    <!-- Hero Section -->
+    <div class="row align-items-center py-5 mb-5">
+
+        <div class="col-md-7">
+
+            <h1 class="display-5 fw-semibold mb-3">
+                Welcome to QuizSphere
+            </h1>
+
+            <p class="lead text-secondary mb-4">
+                An online study and quiz platform where students can
+                practice quizzes, track their results, and improve their
+                knowledge.
+            </p>
+
+            <div class="d-flex gap-3">
+
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    @if (User.IsInRole("ADMIN"))
+                    {
+                        <a asp-controller="Admin"
+                           asp-action="Index"
+                           class="btn btn-dark px-4">
+                            Go to Dashboard
+                        </a>
+                    }
+                    else if (User.IsInRole("FACULTY"))
+                    {
+                        <a asp-controller="Faculty"
+                           asp-action="Index"
+                           class="btn btn-dark px-4">
+                            Go to Dashboard
+                        </a>
+                    }
+                    else if (User.IsInRole("PARTICIPANT"))
+                    {
+                        <a asp-controller="Participant"
+                           asp-action="Index"
+                           class="btn btn-dark px-4">
+                            Go to Dashboard
+                        </a>
+                    }
+                }
+                else
+                {
+                    <a asp-area="Identity"
+                       asp-page="/Account/Login"
+                       class="btn btn-dark px-4">
+                        Login
+                    </a>
+
+                    <a asp-area="Identity"
+                       asp-page="/Account/Register"
+                       class="btn btn-outline-dark px-4">
+                        Register
+                    </a>
+                }
+
+            </div>
+
+        </div>
+
+        <div class="col-md-5 mt-4 mt-md-0">
+
+            <div class="card border-0 shadow-sm">
+
+                <div class="card-body p-4">
+
+                    <h4 class="fw-semibold mb-3">
+                        Online Quiz Portal
+                    </h4>
+
+                    <p class="text-secondary mb-0">
+                        Create quizzes, attempt assessments,
+                        evaluate performance, and monitor progress
+                        through one platform.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Features Section -->
+
+    <div class="text-center mt-5 mb-5">
+
+        <h2 class="fw-semibold">
+            What You Can Do
+        </h2>
+
+        <p class="text-secondary">
+            Everything you need to manage and attempt online quizzes.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4 pb-5 mb-4">
+
+        <div class="col-md-4">
+
+            <div class="card h-100 border-0 shadow-sm">
+
+                <div class="card-body p-4">
+
+                    <h5 class="fw-semibold">
+                        Create & Manage Quizzes
+                    </h5>
+
+                    <p class="text-secondary mb-0">
+                        Faculty members can create quizzes,
+                        add questions, and submit them for approval.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="card h-100 border-0 shadow-sm">
+
+                <div class="card-body p-4">
+
+                    <h5 class="fw-semibold">
+                        Attempt Quizzes
+                    </h5>
+
+                    <p class="text-secondary mb-0">
+                        Participants can attempt approved quizzes
+                        within the specified time limit.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="card h-100 border-0 shadow-sm">
+
+                <div class="card-body p-4">
+
+                    <h5 class="fw-semibold">
+                        Track Your Progress
+                    </h5>
+
+                    <p class="text-secondary mb-0">
+                        View quiz results, scores, and
+                        subject-wise performance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>

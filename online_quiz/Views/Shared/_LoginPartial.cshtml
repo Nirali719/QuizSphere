@@ -10,7 +10,7 @@
         var currentUser = await UserManager.GetUserAsync(User);
 
         <li class="nav-item">
-            <span class="nav-link">
+            <span class="nav-link text-light">
                 Hello, @currentUser.FullName!
             </span>
         </li>
@@ -22,7 +22,7 @@
                   method="post">
 
                 <button type="submit"
-                        class="nav-link btn btn-link text-dark">
+                        class="nav-link btn btn-link text-light">
                     Logout
                 </button>
 
@@ -32,7 +32,7 @@
     else
     {
         <li class="nav-item">
-            <a class="nav-link text-dark"
+            <a class="nav-link text-light"
                asp-area="Identity"
                asp-page="/Account/Register">
                 Register
@@ -40,7 +40,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link text-dark"
+            <a class="nav-link text-light"
                asp-area="Identity"
                asp-page="/Account/Login">
                 Login

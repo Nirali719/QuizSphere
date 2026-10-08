@@ -4,74 +4,144 @@
     ViewData["Title"] = "Deactivate Subject";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
 
-    <h1>Deactivate Subject</h1>
+    <!-- Page Header -->
 
-    <hr />
+    <div class="mb-5">
 
-    <div class="alert alert-warning">
-        <strong>Are you sure you want to deactivate this subject?</strong>
-        <br />
-        The subject will no longer be active, but existing quizzes and
-        records will remain safe.
+        <p class="text-secondary text-uppercase fw-semibold small mb-2">
+            Content Management
+        </p>
+
+        <h1 class="fw-semibold mb-2">
+            Deactivate Subject
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Review the subject details before deactivating it.
+        </p>
+
     </div>
 
-    <dl class="row">
 
-        <dt class="col-sm-3">
-            Subject Name
-        </dt>
+    <!-- Confirmation Card -->
 
-        <dd class="col-sm-9">
-            @Model.Name
-        </dd>
+    <div class="row">
 
-        <dt class="col-sm-3">
-            Description
-        </dt>
+        <div class="col-md-8 col-lg-7">
 
-        <dd class="col-sm-9">
-            @Model.Description
-        </dd>
+            <div class="card border-0 shadow-sm">
 
-        <dt class="col-sm-3">
-            Current Status
-        </dt>
+                <div class="card-body p-4 p-lg-5">
 
-        <dd class="col-sm-9">
+                    <!-- Warning -->
 
-            @if (Model.IsActive)
-            {
-                <span class="badge bg-success">
-                    Active
-                </span>
-            }
-            else
-            {
-                <span class="badge bg-danger">
-                    Inactive
-                </span>
-            }
+                    <div class="mb-4">
 
-        </dd>
+                        <h5 class="fw-semibold mb-2">
+                            Confirm Deactivation
+                        </h5>
 
-    </dl>
+                        <p class="text-secondary mb-0">
+                            Are you sure you want to deactivate this subject?
+                            The subject will no longer be active, but existing
+                            quizzes and records will remain safe.
+                        </p>
 
-    <form asp-action="Delete" method="post">
+                    </div>
 
-        <input type="hidden" asp-for="Id" />
 
-        <button type="submit"
-                class="btn btn-danger">
-            Deactivate Subject
-        </button>
+                    <!-- Subject Details -->
 
-        <a asp-action="Index"
-           class="btn btn-secondary">
-            Cancel
-        </a>
+                    <div class="border rounded-3 p-4 mb-4">
 
-    </form>
+                        <div class="row mb-3">
+
+                            <div class="col-sm-4 text-secondary">
+                                Subject Name
+                            </div>
+
+                            <div class="col-sm-8 fw-semibold">
+                                @Model.Name
+                            </div>
+
+                        </div>
+
+
+                        <div class="row mb-3">
+
+                            <div class="col-sm-4 text-secondary">
+                                Description
+                            </div>
+
+                            <div class="col-sm-8">
+                                @Model.Description
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-sm-4 text-secondary">
+                                Current Status
+                            </div>
+
+                            <div class="col-sm-8">
+
+                                @if (Model.IsActive)
+                                {
+                                    <span class="badge bg-success">
+                                        Active
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">
+                                        Inactive
+                                    </span>
+                                }
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Actions -->
+
+                    <form asp-action="Delete" method="post">
+
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <button type="submit"
+                                    class="btn btn-danger px-4">
+
+                                Deactivate Subject
+
+                            </button>
+
+                            <a asp-action="Index"
+                               class="btn btn-outline-dark px-4">
+
+                                Cancel
+
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
